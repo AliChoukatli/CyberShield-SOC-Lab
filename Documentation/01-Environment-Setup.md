@@ -1,13 +1,20 @@
-# 01-Environment-Setup.
+# 🔴 01 Environment-Setup.
+
+## 📝 Introduction
+This chapter covers the initial setup of our Azure Honeynet SOC Lab environment.  
+We will create the necessary Resource Groups, deploy Windows and Linux virtual machines, configure networking with Virtual Networks (VNet), and install SQL Server along with SQL Server Management Studio (SSMS).  
+Additionally, an attacker VM will be prepared for simulation exercises.  
+All steps are accompanied by screenshots to ensure clarity and reproducibility.
+---
 
 ## 1.1 Resource Groups
-### Step to Create your Resource Groups (e.g., RG-CyberShield)
+### 🚀  Step to Create your Resource Groups (e.g., RG-CyberShield)
 - Go to Ressource Groups > Create > Name your Ressource Group : (EG: RG-CyberShield)
 
 ---
 
 ## 1.2 Windows VM Creation
-### Steps to create Windows VM, network, vnet
+### 🚀  Steps to create Windows VM, network, vnet
 - Go to Virtual machines > Create > name it windows-vm
 - on network tab > Create a new vnet > eg : CyberShield-Vnet > Review & Create
      
@@ -24,7 +31,7 @@
 ---
 
 ## 1.3 Linux VM Creation
-### Steps to create Linux VM on same VNet
+### 🚀 Steps to create Linux VM on same VNet
 - Go to Virtual machines > Create > name it linux-vm
 - On network tab > choose the same vnet for windows > eg : CyberShield-Vnet > Review & Create
 
@@ -41,7 +48,7 @@ now let's connect to our linux vm using ssh:
 ---
 
 ## 1.4 SQL Database Installation
-### Download & Installation
+### 🚀 Steps - Download & Installation
 - Download SQL Server + ISO + Mount
 - Install SQL Server & SSMS
 - on the windows vm, now we will downlaodSQL Database  : go to : https://www.microsoft.com/en-us/evalcenter/download-sql-server-2022, then dowload the exe file
@@ -50,7 +57,7 @@ now let's connect to our linux vm using ssh:
 
 ![SQL_Mount](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/SQL_mount.png)
 
-### SQL Server Configuration
+### 🚀 Steps - SQL Server Configuration
 - Open the SSMS folder
 - click Setup 
 - once done, Go to installation -> New SQL Server standalone -> Next 
@@ -62,7 +69,7 @@ now let's connect to our linux vm using ssh:
 ---
 
 ## 1.5 Attacker VM Setup
-### Creation of RG-Attacker, the VM attacker-vm & Network
+### 🚀 Steps - Creation of RG-Attacker, the VM attacker-vm & Network
 - Go to Virtual machines > Create > > Create a new Ressource Group as 'RG-Attacker' and
 - Name the machine as 'attacker-vm'
 - On network tab > create a new vnet for windows > eg : attacker-vm-vnet > Review & Create
