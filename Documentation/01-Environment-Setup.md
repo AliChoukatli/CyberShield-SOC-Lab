@@ -1,7 +1,6 @@
 # 01-Environment-Setup.
 
 ## 1.1 Resource Groups
-
 ### Step to Create your Resource Groups (e.g., RG-CyberShield)
 - Go to Ressource Groups > Create > Name your Ressource Group : (EG: RG-CyberShield)
 
