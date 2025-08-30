@@ -1,12 +1,12 @@
-# 02 - Vulnerabilities Setup
+# 🔴  02 - Vulnerabilities Setup
 
-## Introduction
+## 📝 Introduction
 In this chapter, we intentionally make our lab machines vulnerable to simulate attacks.  
 We will modify Network Security Group (NSG) rules, open critical ports, and disable firewalls to allow attack simulations from our attacker VM.
 
 ---
 
-## 2.1 Windows VM Vulnerabilities
+## 🚀 2.1 Windows VM Vulnerabilities
 
 ### Remove existing RDP rule
 
@@ -31,7 +31,7 @@ We will modify Network Security Group (NSG) rules, open critical ports, and disa
 
 ---
 
-## 2.2 Linux VM Vulnerabilities
+## 🚀 2.2 Linux VM Vulnerabilities
 ### Remove SSH rule
 - Delete the default SSH rule.
 
@@ -44,6 +44,6 @@ We will modify Network Security Group (NSG) rules, open critical ports, and disa
 
 ---
 
-## Conclusion
+## 📝 Conclusion
 Both Windows and Linux VMs are now intentionally vulnerable.  
 These configurations will allow us to generate attack logs and test Microsoft Sentinel detection rules in the following chapters.
