@@ -1,48 +1,66 @@
-# Attacker Machine
+# 🔴 03 - Attacker & Logs
 
-- Go to Virtual machines > Create > > Create a new Ressource Group as 'RG-Attacker' and name the machine as 'attacker-vm'
-- On network tab > create a new vnet for windows > eg : attacker-vm-vnet > Review & Create
+## 📝 Introduction : 
+This section demonstrates how we simulate attacks from the Attacker VM and generate logs on both Windows and Linux VMs.
+
+---
+
+## 🚀 3.1 Attacker Machine Setup
+
+- Create a new resource group: **RG-Attacker**
+- Create a Windows VM named **attacker-vm**
+- On the network tab, create a new VNet for the attacker VM (e.g., `attacker-vm-vnet`)
+- Review & Create.
      
-# RDP Attacker Windows machine using its Public IP
+### RDP Attacker VM using Public IP
 
 ![attacker_RDP_Win](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/attacker_RDP_Win.png)
 
-## Attacker Logs 
+## 🚀 3.2 Attacker Logs - Windows
 
-- let's RDP from Attacker_VM to Windows_VM and put wrong credentials so we can generate some logs
-
-- Download SSMS on the attacker machine and try to connect with 2 wrong password and 1 correct password to generate logs.
+- RDP from **Attacker_VM** to **Windows_VM** using wrong credentials to generate logs
+- Install SSMS on the attacker machine and attempt 2 wrong logins followed by 1 correct login
 
 ![attacker-ssms-fail](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/attacker-ssms-fail.png)
 
 --- 
 
-## Linux logs 
+## 🚀 3.3 Attacker Logs - Linux
 
-- now let's generate some logs from our linux, go to powershell and connect ssh with wrong passwords.
+- From Linux VM, attempt SSH connections with wrong passwords to generate logs
 
 ![attacker-ssh-connect-fail](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/attacker-ssh-connect-fail.png)
 
 ----
+## 3.4 Viewing Logs on Windows VM
 
-# Let's go back to our Windows-vm and look for the logs 
-- go to event viewer, and we can see some logs from our previous exercice 
+- Open **Event Viewer** to see generated logs from previous exercises. 
 
 ![Event_view_sql_fail](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/Event_view_sql_fail.png)
 
 ![event_attacker-login_fail](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/event_attacker-login_fail.png)
 
-
 ---
 
-## now let's connect on linux machine and look for logs
+## 🚀 3.5 Viewing Logs on Linux VM
 
-type: cd /var/log 
+Now, let's access the Linux VM and inspect the logs that were generated during the previous activities.
 
-type: cat auth.log | grep password to view logs
-
+```bash
+cd /var/log 
+cat auth.log | grep password to view logs
+```
 ![cat_auth_log](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/cat_auth_log.png)
 
 ![cat_auth_log_fail_success](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/cat_auth_log_fail_success.png)
 
+---
 
+##  📝 Conclusion
+
+In this section, we successfully set up the Attacker VM and performed simulated attacks on both the Windows and Linux VMs. We generated logs from:
+
+- Failed and successful RDP and SQL login attempts on Windows
+- Failed SSH login attempts on Linux
+
+All these logs were collected and verified on the respective systems. This prepares the environment for log ingestion and correlation in Microsoft Sentinel, allowing us to detect, analyze, and respond to potential security incidents in a realistic lab scenario.
