@@ -5,6 +5,7 @@ This chapter covers the initial setup of our Azure Honeynet SOC Lab environment.
 We will create the necessary Resource Groups, deploy Windows and Linux virtual machines, configure networking with Virtual Networks (VNet), and install SQL Server along with SQL Server Management Studio (SSMS).  
 Additionally, an attacker VM will be prepared for simulation exercises.  
 All steps are accompanied by screenshots to ensure clarity and reproducibility.
+
 ---
 
 ## 1.1 Resource Groups
