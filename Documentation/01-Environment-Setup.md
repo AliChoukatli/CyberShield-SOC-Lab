@@ -29,3 +29,11 @@
 - At Database Engine Configuration -> Mixed Mode (SQL Server authentication) -> Put your password -> Add Current User -> Next -> Install
 - Once done, go to : https://learn.microsoft.com/en-us/ssms/sql-server-management-studio-ssms -> Download & install SSMS 
 - Restart the computer
+
+---
+
+# Attacker Machine
+
+- Go to Virtual machines > Create > > Create a new Ressource Group as 'RG-Attacker' and name the machine as 'attacker-vm'
+- On network tab > create a new vnet for windows > eg : attacker-vm-vnet > Review & Create
+     
