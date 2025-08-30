@@ -78,3 +78,9 @@ now let's connect to our linux vm using ssh:
 ### RDP Attacker Windows machine using its Public IP
 
 ![attacker_RDP_Win](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/attacker_RDP_Win.png)
+
+
+## Conclusion
+The environment setup is now complete.  
+We have a fully provisioned lab with Windows and Linux VMs, a configured SQL Server instance, and an attacker VM ready for log generation exercises.  
+This foundation ensures that subsequent chapters on vulnerabilities, log ingestion, and Microsoft Sentinel integration can be executed smoothly and consistently.
