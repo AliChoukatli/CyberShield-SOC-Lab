@@ -37,3 +37,6 @@
 - Go to Virtual machines > Create > > Create a new Ressource Group as 'RG-Attacker' and name the machine as 'attacker-vm'
 - On network tab > create a new vnet for windows > eg : attacker-vm-vnet > Review & Create
      
+# RDP Attacker Windows machine using its Public IP
+
+![attacker_RDP_Win](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/attacker_RDP_Win.png)
