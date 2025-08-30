@@ -69,13 +69,6 @@ CyberShield-SOC-Honeynet-Sentinel/
 │   ├── 07-Metrics.md                  # Before vs After hardening
 │   ├── 08-Compliance.md               # NIST mapping, Defender recommendations
 │   └── References.md                  # MS Docs, Josh Madakor, etc.
-├── 📂 Screenshots/
-│   ├── windows-vm-Creation.png
-│   ├── linux-vm-creation.png
-│   ├── Event_view_sql_fail.png
-│   ├── Metric_before.png
-│   ├── Metric_after.png
-│   └── ... (all your screenshots)
 ├── 📂 Sentinel-Rules/
 │   ├── windows-rdp-auth-fail.json
 │   ├── linux-ssh-auth-fail.json
@@ -86,9 +79,6 @@ CyberShield-SOC-Honeynet-Sentinel/
 │   ├── LinuxSyslogQuery.kql
 │   ├── SQLAuthFailQuery.kql
 │   └── GeoIP_Watchlist_Query.kql
-├── 📂 Diagrams/
-│   ├── Lab-Architecture.png
-│   └── Attack-Flow.png
 ├── README.md
 └── LICENSE.md
 ```
