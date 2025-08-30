@@ -57,7 +57,7 @@ This lab is **for educational purposes only** and should not be used in producti
 ---
 
 # Project Structure
-
+```
 CyberShield-SOC-Honeynet-Sentinel/
 ├── 📂 Documentation/
 │   ├── 01-Environment-Setup.md        # Resource Group, VMs (Windows/Linux), SQL Server
@@ -91,6 +91,7 @@ CyberShield-SOC-Honeynet-Sentinel/
 │   └── Attack-Flow.png
 ├── README.md
 └── LICENSE.md
+```
 ---
 
 ## Deployment Steps
