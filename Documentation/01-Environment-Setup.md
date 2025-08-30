@@ -1,4 +1,4 @@
-# 🔴 01 Environment-Setup.
+# 🔴 01 Environment Setup.
 
 ## 📝 Introduction
 This chapter covers the initial setup of our Azure Honeynet SOC Lab environment.  
