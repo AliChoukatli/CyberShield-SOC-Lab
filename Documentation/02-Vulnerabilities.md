@@ -18,3 +18,11 @@
 ![NSG_Linux_Rule_any](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/NSG_linux_Rule_any.png)
 
 ---
+
+# RDP Windows machine using its Public IP
+
+![Win_IP](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/win_ip.png)
+
+- Go to fiewall advanced setting : turn off Firewall for all profiles 
+
+![win_turnoff_firewall](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/win_turnoff_firewall.png)
