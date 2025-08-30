@@ -1,11 +1,11 @@
-# CyberShield SOC Honeynet with Microsoft Sentinel
+# CyberShield SOC Lab with Microsoft Sentinel
 
 [![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/)
 
 
 
 ## Overview
-This project demonstrates the deployment and monitoring of a **honeynet environment** in Microsoft Azure, integrated with **Microsoft Sentinel** for threat detection, incident response, and security visibility.
+This project demonstrates the deployment and monitoring of a **honeynet environment** in Microsoft Azure, integrated with **Microsoft Sentinel** and **Microsoft Defender** for threat detection, incident response, and security visibility.
 
 The goal is to simulate a real-world enterprise SOC (Security Operations Center) scenario by:
 - Deploying vulnerable virtual machines and resources in Azure.
