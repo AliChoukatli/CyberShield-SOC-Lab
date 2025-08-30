@@ -8,14 +8,12 @@ All steps are accompanied by screenshots to ensure clarity and reproducibility.
 
 ---
 
-## 1.1 Resource Groups
-### 🚀  Step - Create your Resource Groups (e.g., RG-CyberShield)
+## 🚀 1.1 Resource Groups Creation (e.g., RG-CyberShield)
 - Go to Ressource Groups > Create > Name your Ressource Group : (EG: RG-CyberShield)
 
 ---
 
-## 1.2 Windows VM Creation
-### 🚀  Steps - Create Windows VM, network, vnet
+## 🚀 1.2 Windows VM Setup
 - Go to Virtual machines > Create > name it windows-vm
 - on network tab > Create a new vnet > eg : CyberShield-Vnet > Review & Create
      
@@ -31,8 +29,7 @@ All steps are accompanied by screenshots to ensure clarity and reproducibility.
 
 ---
 
-## 1.3 Linux VM Creation
-### 🚀 Steps - Create Linux VM on same VNet
+## 🚀 1.3 Linux VM Setup
 - Go to Virtual machines > Create > name it linux-vm
 - On network tab > choose the same vnet for windows > eg : CyberShield-Vnet > Review & Create
 
@@ -48,8 +45,7 @@ now let's connect to our linux vm using ssh:
 
 ---
 
-## 1.4 SQL Database Installation
-### 🚀 Steps - Download & Installation
+## 🚀 1.4 SQL Database Download & Installation
 - Download SQL Server + ISO + Mount
 - Install SQL Server & SSMS
 - on the windows vm, now we will downlaodSQL Database  : go to : https://www.microsoft.com/en-us/evalcenter/download-sql-server-2022, then dowload the exe file
@@ -58,7 +54,7 @@ now let's connect to our linux vm using ssh:
 
 ![SQL_Mount](https://github.com/AliChoukatli/CyberShield-SOC-Honeynet-Sentinel/blob/main/Screenshots/SQL_mount.png)
 
-### 🚀 Steps - SQL Server Configuration
+### SQL Server Configuration
 - Open the SSMS folder
 - click Setup 
 - once done, Go to installation -> New SQL Server standalone -> Next 
@@ -69,8 +65,7 @@ now let's connect to our linux vm using ssh:
 
 ---
 
-## 1.5 Attacker VM Setup
-### 🚀 Steps - Creation of RG-Attacker, the VM attacker-vm & Network
+## 🚀 1.5 Attacker VM Setup
 - Go to Virtual machines > Create > > Create a new Ressource Group as 'RG-Attacker' and
 - Name the machine as 'attacker-vm'
 - On network tab > create a new vnet for windows > eg : attacker-vm-vnet > Review & Create
