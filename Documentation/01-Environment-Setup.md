@@ -56,7 +56,7 @@ now let's connect to our linux vm using ssh:
 - download media -> ISO -> download
 - Open folder  > right click on SQLServer2022-x64 -> Mount
 
-![SQL_Mount](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/SQL_mount.png)
+![SQL_Mount](https://github.com/AliChoukatli/CyberShield-SOC-Honeynet-Sentinel/blob/main/Screenshots/SQL_mount.png)
 
 ### 🚀 Steps - SQL Server Configuration
 - Open the SSMS folder
