@@ -27,9 +27,9 @@ This lab is **for educational purposes only** and should not be used in producti
 - **Log Analytics Workspace**: Centralized log collection
 
 **Data sources ingested:**
-- Security logs from VMs
+- Security logs from Windows and Linux VMs (including SQL Server logs)
 - Microsoft Defender alerts
-- Sign-in logs from Azure AD
+- Sign-in logs from Azure AD / Entra ID
 - NSG flow logs
 
 ---
