@@ -56,46 +56,44 @@ This lab is **for educational purposes only** and should not be used in producti
 
 ---
 
-Azure-Honeynet-SOC-Lab/
 │
 ├── 📂 Documentation
-│   ├── 01-Environment-Setup.md        # Ressource Group, VMs (Windows/Linux), SQL Server
-│   ├── 02-Vulnerabilities.md          # RDP/SSH open, Firewall OFF, SQL misconfig
-│   ├── 03-Attacks-Logs.md             # Attacker VM, brute force attempts, Event Viewer, Syslog
-│   ├── 04-Log-Ingestion.md            # LAW, AMA, DCR, Syslog, Windows Events
-│   ├── 05-Sentinel-Setup.md           # Watchlists, Analytics Rules, Workbooks, Incidents
-│   ├── 06-Hardening.md                # NSG fix, Firewall, Defender for Cloud
-│   ├── 07-Metrics.md                  # Before vs After hardening
-│   ├── 08-Compliance.md               # NIST mapping, Defender recommendations
-│   └── References.md                  # Liens docs MS, Josh Madakor, etc.
+│ ├── 01-Environment-Setup.md # Resource Group, VMs (Windows/Linux), SQL Server
+│ ├── 02-Vulnerabilities.md # RDP/SSH open, Firewall OFF, SQL misconfig
+│ ├── 03-Attacks-Logs.md # Attacker VM, brute force attempts, Event Viewer, Syslog
+│ ├── 04-Log-Ingestion.md # LAW, AMA, DCR, Syslog, Windows Events
+│ ├── 05-Sentinel-Setup.md # Watchlists, Analytics Rules, Workbooks, Incidents
+│ ├── 06-Hardening.md # NSG fix, Firewall, Defender for Cloud
+│ ├── 07-Metrics.md # Before vs After hardening
+│ ├── 08-Compliance.md # NIST mapping, Defender recommendations
+│ └── References.md # Microsoft docs, Josh Madakor, etc.
 │
 ├── 📂 Screenshots
-│   ├── windows-vm-Creation.png
-│   ├── linux-vm-creation.png
-│   ├── Event_view_sql_fail.png
-│   ├── Metric_before.png
-│   ├── Metric_after.png
-│   └── … (toutes tes captures organisées)
+│ ├── windows-vm-creation.png
+│ ├── linux-vm-creation.png
+│ ├── event-view-sql-fail.png
+│ ├── metric-before.png
+│ ├── metric-after.png
+│ └── ... (all screenshots organized)
 │
 ├── 📂 Sentinel-Rules
-│   ├── windows-rdp-auth-fail.json
-│   ├── linux-ssh-auth-fail.json
-│   ├── mssql-auth-fail.json
-│   └── impossible-travel.json   # (tu peux rajouter tes propres rules SC-200 style)
+│ ├── windows-rdp-auth-fail.json
+│ ├── linux-ssh-auth-fail.json
+│ ├── mssql-auth-fail.json
+│ └── impossible-travel.json # Custom SC-200 style rules
 │
 ├── 📂 KQL-Queries
-│   ├── WindowsEventQuery.kql
-│   ├── LinuxSyslogQuery.kql
-│   ├── SQLAuthFailQuery.kql
-│   └── GeoIP_Watchlist_Query.kql
+│ ├── WindowsEventQuery.kql
+│ ├── LinuxSyslogQuery.kql
+│ ├── SQLAuthFailQuery.kql
+│ └── GeoIP_Watchlist_Query.kql
 │
 ├── 📂 Diagrams
-│   ├── Lab-Architecture.png      # Un schéma clair du lab (VMs, LAW, Sentinel, Defender)
-│   └── Attack-Flow.png           # Exemple brute force → Logs → Sentinel Alert
+│ ├── Lab-Architecture.png # Lab architecture (VMs, LAW, Sentinel, Defender)
+│ └── Attack-Flow.png # Example: brute force → Logs → Sentinel Alert
 │
 ├── README.md
 └── LICENSE
-
 ---
 
 ## Deployment Steps
