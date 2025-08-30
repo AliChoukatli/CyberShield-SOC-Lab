@@ -1,19 +1,27 @@
-# Create a ressource groups
+## 1.1 Resource Groups
+- Create your Resource Groups (e.g., RG-CyberShield)
+Create a ressource groups
    - Go to Ressource Groups > Create > Name your Ressource Group : (EG: RG-CyberShield)
 
-# Windows Vm Creation
-   - Go to Virtual machines > Create > name it windows-vm
-   - on network tab > Create a new vnet > eg : CyberShield-Vnet > Review & Create
+
+## 1.2 Windows VM Creation
+- Steps to create Windows VM, network, vnet
+- Go to Virtual machines > Create > name it windows-vm
+- on network tab > Create a new vnet > eg : CyberShield-Vnet > Review & Create
      
 ![windows-vm-creation](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/windows-vm-Creation.png)
 
-# Linux Vm Creation
-   - Go to Virtual machines > Create > name it linux-vm
-   - On network tab > choose the same vnet for windows > eg : CyberShield-Vnet > Review & Create
+
+## 1.3 Linux VM Creation
+- Steps to create Linux VM on same VNet
+- Go to Virtual machines > Create > name it linux-vm
+- On network tab > choose the same vnet for windows > eg : CyberShield-Vnet > Review & Create
 
 ![linux-vm-creation](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/linux-vm-creation.png)
 
-# SQL Database
+## 1.4 SQL Database Installation
+- Download SQL Server + ISO + Mount
+- Install SQL Server & SSMS
 
 - on the windows vm, now we will downlaodSQL Database  : go to : https://www.microsoft.com/en-us/evalcenter/download-sql-server-2022, then dowload the exe file
 
@@ -32,8 +40,8 @@
 
 ---
 
-# Attacker Machine
-
+## 1.5 Attacker VM Setup
+- Create RG-Attacker, VM attacker-vm, network
 - Go to Virtual machines > Create > > Create a new Ressource Group as 'RG-Attacker' and name the machine as 'attacker-vm'
 - On network tab > create a new vnet for windows > eg : attacker-vm-vnet > Review & Create
      
