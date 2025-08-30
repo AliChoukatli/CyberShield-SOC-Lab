@@ -9,13 +9,13 @@ All steps are accompanied by screenshots to ensure clarity and reproducibility.
 ---
 
 ## 1.1 Resource Groups
-### 🚀  Step to Create your Resource Groups (e.g., RG-CyberShield)
+### 🚀  Step - Create your Resource Groups (e.g., RG-CyberShield)
 - Go to Ressource Groups > Create > Name your Ressource Group : (EG: RG-CyberShield)
 
 ---
 
 ## 1.2 Windows VM Creation
-### 🚀  Steps to create Windows VM, network, vnet
+### 🚀  Steps - Create Windows VM, network, vnet
 - Go to Virtual machines > Create > name it windows-vm
 - on network tab > Create a new vnet > eg : CyberShield-Vnet > Review & Create
      
@@ -32,7 +32,7 @@ All steps are accompanied by screenshots to ensure clarity and reproducibility.
 ---
 
 ## 1.3 Linux VM Creation
-### 🚀 Steps to create Linux VM on same VNet
+### 🚀 Steps - Create Linux VM on same VNet
 - Go to Virtual machines > Create > name it linux-vm
 - On network tab > choose the same vnet for windows > eg : CyberShield-Vnet > Review & Create
 
