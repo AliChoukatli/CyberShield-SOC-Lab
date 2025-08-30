@@ -1,6 +1,7 @@
 # 🔴  02 - Vulnerabilities Setup
 
 ## 📝 Introduction
+
 In this chapter, we intentionally make our lab machines vulnerable to simulate attacks.  
 We will modify Network Security Group (NSG) rules, open critical ports, and disable firewalls to allow attack simulations from our attacker VM.
 
@@ -32,6 +33,7 @@ We will modify Network Security Group (NSG) rules, open critical ports, and disa
 ---
 
 ## 🚀 2.2 Linux VM Vulnerabilities
+
 ### Remove SSH rule
 - Delete the default SSH rule.
 
