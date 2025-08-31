@@ -6,7 +6,7 @@ This section covers how to configure SQL Server and the VMs to generate logs, si
 
 ---
 
-## 4.1 Configure SQL Server Audit to Event Viewer
+## 🚀 4.1 Configure SQL Server Audit to Event Viewer
 
 To enable SQL Server to send logs to Windows Event Viewer:
 
@@ -35,7 +35,7 @@ To enable SQL Server to send logs to Windows Event Viewer:
 
 ---
 
-## 4.2 Generate Attacker Logs
+## 🚀 4.2 Generate Attacker Logs
 
 ### Windows Attacker VM
 - RDP from `Attacker_VM` to `Windows_VM` using **wrong credentials** to generate logs.
@@ -54,13 +54,9 @@ To enable SQL Server to send logs to Windows Event Viewer:
 
 ![attacker-ssh-connect-fail](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/attacker-ssh-connect-fail.png)
 
-----
-
-
-
 ---
 
-## 4.3 View Logs on Windows VM
+## 🚀 4.3 View Logs on Windows VM
 - Open **Event Viewer** on Windows VM.  
 - You should see the generated logs from **SQL Server** and **failed login attempts**.
   
@@ -73,7 +69,7 @@ To enable SQL Server to send logs to Windows Event Viewer:
 
 ---
 
-## 4.4 View Logs on Linux VM
+## 🚀 4.4 View Logs on Linux VM
 1. Connect to the Linux VM.
 2. Navigate to the log directory:
    ```bash
