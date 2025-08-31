@@ -74,7 +74,7 @@ To enable SQL Server to send logs to Windows Event Viewer:
    ```
 3. Check authentication logs:
 ```bash
-cat auth.log | grep password to view logs
+cat auth.log | grep password
 ```
 ![cat_auth_log](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/cat_auth_log.png)
 
