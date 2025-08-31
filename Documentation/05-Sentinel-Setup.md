@@ -33,12 +33,13 @@ This setup is the foundation for effective security monitoring, alerting, and in
 
 ![Watchlist_Sentinel](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/watchlist_Sentinel.png)
 
-> You should see **54,803 entries**.
-
+4. Go to **Logs**.
+5. Run the query to check if events are collected:
 ```kusto
 _GetWatchlist("geoip")
 |count
 ```
+> You should see **54,803 entries**.
 
 ![Count_geoip](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/Count_geoip.png)
 
