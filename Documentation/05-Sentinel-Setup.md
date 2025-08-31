@@ -1,122 +1,122 @@
-# Log Analytics Workspace & Sentinel Integration:
+# 05 - Log Analytics Workspace & Sentinel Integration:
 
-- Go to Azure > Log Analytics workspace > Create
-- Give it a Name > Create
+## 5.1. Create Log Analytics Workspace
 
-- Go to Microsoft Sentinel
-- Create > Select your Workspace
-- Go to 'Watchlist' -> New 
-- Name : 'geoip'
-- Source Type : Local File
-- Download and upload the csv File (put link for csv file)
-- SearchKey : Network -> Create
+1. Go to **Azure Portal** → *Log Analytics Workspaces* → **Create**.  
+2. Enter a name (e.g., `LAW-CyberShield`) → **Review + Create**.
+
+## 5.2. Connect Microsoft Sentinel
+
+1. Go to **Microsoft Sentinel** → **Create**.  
+2. Select your **Log Analytics Workspace**.  
+3. Create a **Watchlist**:
+   - Name: `geoip`  
+   - Source Type: *Local File*  
+   - Download & upload the CSV file ([insert link here])  
+   - SearchKey: `Network` → **Create**
 
 ![Watchlist_Sentinel](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/watchlist_Sentinel.png)
 
-> You should see 54803
+> You should see **54,803 entries**.
 
 ```kusto
 _GetWatchlist("geoip")
 |count
 ```
+
 ![Count_geoip](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/Count_geoip.png)
 
 --- 
 
-Microsoft Defender for cloud
+## 5.3 Microsoft Defender for cloud
 
-- Go to Microsoft for Cloud -> Environment settings 
+1. Go to **Microsoft Defender for Cloud** → *Environment Settings*.  
 
 ![Env_Setting](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/Environment_Setting.png)
 
-- Select LAW-CyberShield > Defender Plans and put 'on' for Servers > Save
+2. Select your workspace `LAW-CyberShield` → **Defender Plans** → turn **Servers** ON → **Save**.  
 
-- Go to data Collections tab > select All Events > Save
+3. Go to **Data Collections** → select **All Events** → **Save**.  
 
-- Go back to Environment Settings > Click on Azure Subscription > Defender Plans
-- Select Servers + Databases + Storage + Key Vault > ON
+4. Return to **Environment Settings** → *Azure Subscription* → **Defender Plans** → turn ON:
+   - Servers  
+   - Databases  
+   - Storage  
+   - Key Vault 
 
 ![Def_plans](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/Def_plans.png)
  
-- on Setting > Select Continuous export > Log Analytics workspace tab
-- Select All 'Exported data types'
-
-- Resource group > Select your Ressource Group (Eg: RG-CyberShield)
-- Select Target workspace > EG: LAW-CyberShield > Save
+5. Go to **Settings** → *Continuous Export* → Log Analytics Workspace tab → select all **Exported data types**.  
+6. Select **Resource Group** (`RG-CyberShield`) and **Target Workspace** (`LAW-CyberShield`) → **Save**.  
 
 ![Continuous_Export](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/Continuous%20export.png)
 
 ---- 
 
-Storage accounts
+## 5.4 Storage accounts
 
-- on Azure, Go to Storage accounts
-- Select Create
-- Choose the ressource group and choose a name 
-- Click Review + Create
+1. Go to **Azure** → *Storage Accounts* → **Create**.  
+2. Select your **Resource Group**, enter a unique name → **Review + Create**. 
 
 ![Storage creation](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/storage_creation.png)
 
 --- 
 
-- Go to NSG ( Network Security Groups)
+## 5.5 NSG Flow Logs
 
-- Go to Azure > NSG
-- Select the Windows VM > NSG flow logs
-- Create
-- Select target Ressources > Select Linux vm and Windows vm 
+1. Go to **Azure** → *Network Security Groups (NSG)*.  
+2. Select the **Windows VM** → *NSG Flow Logs* → **Create**.  
+3. Add target resources: **Linux VM** and **Windows VM**.  
+4. Go to **Analytics** tab → set interval to **Every 10 min** → **Create**.  
 
 ![NSG_flow](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/NSG_Flow.png)
 
-- Analytics tab > Every 10 min
-- Create
-
-
 ----
 
-# Data Collection Rules ( we will create a DCR for Linux to add it to Azure monitor) 
+## 5.6 Data Collection Rules (Linux) 
 
-- Go to Data Collection Rules > Create
-- Give it a name
--  Select Linux as a platform
-- Go to Resources tab > Select linux-vm
-- Go to Collect & Deliver tab > Add Data Source > Select Syslog
-- On Destination : Select Azure monitor logs to your LAW > Create
+1. Go to **Data Collection Rules** → **Create**.  
+2. Enter a name (e.g., `DCR-Linux-Syslog`) → select **Linux** as platform.  
+3. Go to **Resources** → select your **Linux VM**.  
+4. Go to **Collect & Deliver** → **Add Data Source** → choose **Syslog**.  
+5. Set destination to **Azure Monitor Logs** → target your LAW → **Create**.
+
+![DCR_Linux_review](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/DCR_Linux_review.png)
 
 ---
 
-# Collect Windows Security Events via Azure Monitor Agent (AMA) and Data Collection Rule (DCR)
+## 5.7 Collect Windows Security Events via AMA and DCR
 
-For Windows, Microsoft changed the way we create the Windows Security Events using and the AMA agent and Data Collection Rule.
 
-## Step 1: Create Data Collection Rule (DCR)
+Microsoft now uses **Azure Monitor Agent (AMA)** with **Data Collection Rules (DCR)** for Windows Security Events.
 
-1. GO to Defender Portal : https://security.microsoft.com/sentinel/ba4ff38f-0dee-45af-8b8b-0d92f1d17290/rg-cybershield/law-cybershield/contenthub?tid=60448f2a-c3b7-4368-b20e-916bda32b12d
-2. Search  for **Windows Security Events** > **Windows Security Events via AMA** > Install
-3. Slelect on **Windows Security Events via AMA** > Open Connector Page
-4. Click **Create Data Collection Rule**.
-5. Configure the DCR:
-   - **Rule Name**: e.g., `Windows-Security-Events`
-   - **Subscription**: choose your Azure subscription
-   - **Resource Group** : RG-CyberShield
+### Steps:
+
+1. Go to the **Defender Portal**.  
+2. Search for **Windows Security Events via AMA** → **Install**.  
+3. Open **Connector Page** → **Create Data Collection Rule**.  
+4. Configure the DCR:
+   - **Rule Name**: `Windows-Security-Events`  
+   - **Subscription**: your Azure subscription  
+   - **Resource Group**: `RG-CyberShield`  
 
 ![Windows_Events_Basic](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/Windows_Events_Basic.png)
 
-6. Go to the **Resources** tab:
-   - Select your **Windows VM(s)** to monitor
+5. Go to **Resources** → select your **Windows VM(s)**.  
 
 ![Windows_Events_Resource](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/Windows_Events_Resource.png)
 
-7. Go to the **Collect** tab:
-   - Select **All Security Events** (this ensures Success and Failure audits are collected)
+6. Go to **Collect** → select **All Security Events** (ensures both Success & Failure audits are collected).  
 
-  ![Windows_Events_Review](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/Windows_Events_Review.png)
+![Windows_Events_Review](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/Windows_Events_Review.png)
   
-8. Click **Review + Create**, then **Create**.
+7. Click **Review + Create** → **Create**.
 
 ---
 
-## Verify Logs in Log Analytics Workspace for Windows-vm
+## 5.8. Verify Logs in Log Analytics Workspace
+
+### Windows 
 
 1. Open your **Log Analytics Workspace** (e.g., `LAW-RG-lab`).
 2. Go to **Logs**.
@@ -129,7 +129,7 @@ SecurityEvent
 
 ![Security_Event_KQL](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/Security_Event_KQL.png)
 
-## Verify Logs in Log Analytics Workspace for Linux-vm
+### Linux 
 
 1. Open your **Log Analytics Workspace** (e.g., `LAW-RG-lab`).
 2. Go to **Logs**.
@@ -139,93 +139,81 @@ SecurityEvent
 Syslog
 | take 10
 ```
-![syslog_KQL](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/syslog_KQL.png)
 
+![syslog_KQL](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/syslog_KQL.png)
 
 ---
 
-# Entra ID Logs
+## 5.9 Entra ID Logs
 
-- Search for Microsoft Entra ID > Diagnostic Settings
-- click on + Add diagnostic setting
-- Give it a name
-- Select
-   - AuditLogs
-   - SignInLogs
-- Destination details > Send to Log Analytics workspace
+1. Go to **Microsoft Entra ID** → *Diagnostic Settings* → **+ Add Diagnostic Setting**.  
+2. Name the setting and select the following logs:
+   - AuditLogs  
+   - SignInLogs  
+3. Set the destination: **Send to Log Analytics Workspace** → **Save**.  
 
 ![DS](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/DS.png)
 
-- Save
+---
 
-# Create a user on Entra ID 
+## 5.10 Create a User in Entra ID
 
-- Search for Microsoft Entra ID
-- + New User > Create a new user
-- Create
-- Go to the user : test > Assigned Roles > Add Assignments > Global Administrator
-
-> this will create an auth log
-
-- Open a new incognito tab > go to Azure portal
-- Connect with the user principal name (EG: test@cybershieldlab.onmicrosoft.com)
-- do 2 wrong password and 1 correct password
-- Create a new password > Sign in.
-
-- Go back to Azure > Log Analytic Workspace > Log
+1. Go to **Microsoft Entra ID** → **+ New User** → **Create User**.  
+2. Go to the user (e.g., `test`) → **Assigned Roles** → **Add Assignment** → **Global Administrator**.  
+   > This will generate authentication logs.  
+3. Open an **incognito tab** → log in with the new user:  
+   - Attempt 2 wrong passwords and 1 correct password  
+   - Create a new password → sign in.  
+4. Return to **Log Analytics Workspace** → **Logs** to verify the generated logs.  
 
 ![auditlogs_test](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/auditlogs_test.png)
 
-- On Azure > Search for Monitor > Activity log > Export Activity Logs
-- Add Diagnostic setting > Select
-   - Administrative
-   - Security
-   - ServiceHealth
-   - Alert
-   - Recommendation
-   - Policy
-   - Autoscale
-   - ResourceHealth
-- Send to Log Analytics workspace
+---
 
-- GO to Log Analytics workspace > Logs
+## 5.11 Export Activity Logs
+
+1. Go to **Monitor** → *Activity Log* → **Export Activity Logs**.  
+2. Add a **Diagnostic Setting** → select the following categories:  
+   - Administrative  
+   - Security  
+   - ServiceHealth  
+   - Alert  
+   - Recommendation  
+   - Policy  
+   - Autoscale  
+   - ResourceHealth  
+3. Send to **Log Analytics Workspace** → **Save**.  
 
 - ![Azure_Activity](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/Azure_Activity.png)
 
 ---
 
-# Let's create more logs throgh Storage accounts & Key Vault
+## 5.12 Additional Logs via Storage Accounts & Key Vault
 
-## Storage Accounts
-- On Azure Search for 'Storage accounts ' > Monitoring > Diagnostic Settings
-- Click On 'blob'
-- + Add diagnostic setting
+### Storage Accounts
+
+1. Go to **Storage Accounts** → *Monitoring* → **Diagnostic Settings** → select **Blob** → **+ Add Diagnostic Setting**.  
+2. Go back → *Data Storage* → **Containers** → create a test container named `test`.  
 
 ![DS_blob](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/DS_blob.png)
 
-- Go back to 'Storage accounts' > Select your storage > Data Storage > Containers
-- Create a test container > Add Container > Name : test
-
 ---
 
-## Key Vaults
-- On Azure Search for Key Vaults > + Create
-- Give it a name (Eg: test20250828)
-- on Access configuration tab > select Vault access policy - Select the user (Eg: Ali Chokatli)
-- Review Create
-- Select the key vault ( eg: test20250828) > Object > Secrets > Generate/import
-- Name it & give it a secret value
+### Key Vaults
+
+
+1. Go to **Key Vaults** → **+ Create** → enter a name (e.g., `test20250828`).
 
 ![Keyvault_secret](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/keyvault_secret.png)
 
-- select the secret key
-- CLick on Show Secret Value
-> This will trigger some logs
+3. Access configuration → select **Vault Access Policy** → choose a user (e.g., Ali Choukatli) → **Review + Create**.  
+4. Select the Key Vault → **Secrets** → **Generate/Import** → provide a name & secret value.  
+5. Select the secret → **Show Secret Value**.  
+   > This action will trigger logs.
 
 ![Secret_Value](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/Secret_value.png)
 
-- Go to Log Analytics workspace > type :
-  'StorageBlobLogs'
+6. Go to **Log Analytics Workspace** → run the query:
 
 ![StorageBlobLogs_KQL](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/StorageBlobLogs_KQL.png)
 
