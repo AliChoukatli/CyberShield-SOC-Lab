@@ -81,6 +81,7 @@ now let's connect to our linux vm using ssh:
 
 ![attacker_RDP_Win](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/attacker_RDP_Win.png)
 
+---
 
 ## 📝 Conclusion
 The environment setup is now complete.  
