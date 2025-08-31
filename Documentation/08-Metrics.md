@@ -33,6 +33,6 @@ Stop Time: 2025-08-29 16:00
 
 ![Metric_After](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/Metric_after.png)
 
-**✅Observation:**  
+✅ **Observation:**  
 The hardening and security measures significantly reduced the number of security events, syslog messages, alerts, and incidents, demonstrating an improved security posture and a lower attack surface.
 
