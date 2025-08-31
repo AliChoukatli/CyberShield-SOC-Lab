@@ -83,7 +83,7 @@ now let's connect to our linux vm using ssh:
 
 ---
 
-## 📝 Conclusion
+## ✅ Conclusion
 The environment setup is now complete.  
 We have a fully provisioned lab with Windows and Linux VMs, a configured SQL Server instance, and an attacker VM ready for log generation exercises.  
 This foundation ensures that subsequent chapters on vulnerabilities, log ingestion, and Microsoft Sentinel integration can be executed smoothly and consistently.
