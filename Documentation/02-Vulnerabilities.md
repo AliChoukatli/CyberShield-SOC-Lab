@@ -46,6 +46,6 @@ We will modify Network Security Group (NSG) rules, open critical ports, and disa
 
 ---
 
-## 📝 Conclusion
+## ✅ Conclusion
 Both Windows and Linux VMs are now intentionally vulnerable.  
 These configurations will allow us to generate attack logs and test Microsoft Sentinel detection rules in the following chapters.
