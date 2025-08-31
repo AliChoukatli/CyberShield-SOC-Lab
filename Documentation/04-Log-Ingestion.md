@@ -6,7 +6,28 @@ This section covers how to configure SQL Server and the VMs to generate logs, si
 
 ---
 
-## 4.1 Configure SQL Server Audit to Event Viewer
+
+---
+
+## 4.1 Generate Attacker Logs
+
+### Windows Attacker VM
+- RDP from `Attacker_VM` to `Windows_VM` using **wrong credentials** to generate logs.
+- On the attacker machine, install **SSMS** and try to connect with **2 wrong passwords** and **1 correct password**.
+
+
+![attacker-ssms-fail](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/attacker-ssms-fail.png)
+
+--- 
+
+### Linux VM
+- Generate logs by attempting **SSH connections** with wrong passwords from the Linux VM.
+
+![attacker-ssh-connect-fail](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/attacker-ssh-connect-fail.png)
+
+----
+
+## 4.2 Configure SQL Server Audit to Event Viewer
 
 To enable SQL Server to send logs to Windows Event Viewer:
 
@@ -34,24 +55,6 @@ To enable SQL Server to send logs to Windows Event Viewer:
 7. click disconnect and reconnect
 
 ---
-
-## 4.2 Generate Attacker Logs
-
-### Windows Attacker VM
-- RDP from `Attacker_VM` to `Windows_VM` using **wrong credentials** to generate logs.
-- On the attacker machine, install **SSMS** and try to connect with **2 wrong passwords** and **1 correct password**.
-
-
-![attacker-ssms-fail](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/attacker-ssms-fail.png)
-
---- 
-
-### Linux VM
-- Generate logs by attempting **SSH connections** with wrong passwords from the Linux VM.
-
-![attacker-ssh-connect-fail](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/attacker-ssh-connect-fail.png)
-
-----
 
 ## 4.3 View Logs on Windows VM
 - Open **Event Viewer** on Windows VM.  
