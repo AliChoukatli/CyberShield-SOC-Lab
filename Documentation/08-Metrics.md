@@ -1,11 +1,10 @@
+# 🔴 Metrics Before Hardening / Security Controls
 
-## Metrics Before Hardening / Security Controls
+The table below presents the security metrics collected over a 24-hour period in our unprotected environment:
 
-The following table shows the metrics we measured in our insecure environment for 24 hours:
-<br>
-| Start Time 2025-08-27 14:38
-<br>
-| Stop Time 2024-08-28 14:38
+**Monitoring Period:**  
+Start Time: 2025-08-27 14:38  
+Stop Time: 2025-08-28 14:38  
 
 ![Metric_Before](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/Metric_before.png)
 
@@ -19,11 +18,11 @@ The following table shows the metrics we measured in our insecure environment fo
 
 ## Metrics After Hardening / Security Controls
 
-The following table shows the metrics we measured in our insecure environment for 24 hours:
-<br>
-| Start Time 2025-08-28 16:00
-<br>
-| Stop Time 2024-08-29 16:00
+The table below shows the security metrics collected over a 24-hour period after implementing hardening measures and security controls:
+
+**Monitoring Period:**  
+Start Time: 2025-08-28 16:00  
+Stop Time: 2025-08-29 16:00  
 
 | Metric                   | Count
 | ------------------------ | -----
@@ -33,3 +32,7 @@ The following table shows the metrics we measured in our insecure environment fo
 | SecurityIncident         | 3
 
 ![Metric_After](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/Metric_after.png)
+
+**✅Observation:**  
+The hardening and security measures significantly reduced the number of security events, syslog messages, alerts, and incidents, demonstrating an improved security posture and a lower attack surface.
+
