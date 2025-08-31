@@ -1,4 +1,4 @@
-# Sentinel Workbook ( Recent Method) 
+# # 🔴 06 - Sentinel Workbooks & Analytics
 
 - Go to [https://security.microsoft.com/sentinel/ba4ff38f-0dee-45af-8b8b-0d92f1d17290/rg-cybershield/law-cybershield/workbooks?tid=60448f2a-c3b7-4368-b20e-916bda32b12d]
 - Add Workbook > Edit
