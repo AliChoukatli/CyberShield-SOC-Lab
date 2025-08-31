@@ -40,7 +40,7 @@ To enable SQL Server to send logs to Windows Event Viewer:
 ### Windows Attacker VM
 - RDP from `Attacker_VM` to `Windows_VM` using **wrong credentials** to generate logs.
 
-![Attacker_RDP_wrong](
+![Attacker_RDP_fail](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/RDP_Attacker-vm.png)
 
 - On the attacker machine, install **SSMS** and try to connect with **2 wrong passwords** and **1 correct password**.
 
