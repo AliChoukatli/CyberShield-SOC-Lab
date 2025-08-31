@@ -32,5 +32,15 @@
   
 ![Manage_Incident](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/Manage_Incident.png)
   
+---
 
+# For more Hardening - Microsoft Defender for Cloud Recommendation 
+
+- Go to Microsoft Defender for Cloud > Security Posture > Recommendations
+
+![Defender_Recommendations](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/Defender_Recommendations.png)
+
+An Example : Azure Backup should be enabled for virtual machines
+
+![recomm_Backup](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/recomm_Backup.png)
 
