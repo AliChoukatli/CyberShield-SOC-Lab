@@ -56,7 +56,7 @@ cat auth.log | grep password to view logs
 
 ---
 
-##  📝 Conclusion
+##  ✅ Conclusion
 
 In this section, we successfully set up the Attacker VM and performed simulated attacks on both the Windows and Linux VMs. We generated logs from:
 
