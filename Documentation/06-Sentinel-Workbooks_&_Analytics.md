@@ -1,13 +1,20 @@
-# # 🔴 06 - Sentinel Workbooks & Analytics
+# 🔴 06 - Sentinel Workbooks & Analytics
 
-- Go to [https://security.microsoft.com/sentinel/ba4ff38f-0dee-45af-8b8b-0d92f1d17290/rg-cybershield/law-cybershield/workbooks?tid=60448f2a-c3b7-4368-b20e-916bda32b12d]
-- Add Workbook > Edit
-- Remove what is there
-- Add > Add data source + visualization > Advanced Editor
-- we will add some json file ( link ) for :
+## 📝 Introduction
+This section covers the creation and configuration of Microsoft Sentinel Workbooks, the import of custom JSON queries for monitoring authentication events, and the setup of analytics rules. By following these steps, you can visualize and monitor brute force attempts and other suspicious activities across Windows, Linux, and SQL Server environments. This provides a centralized view of security events, enabling proactive threat detection and response.
 
-  1) windows-rdp-auth-fail
-   - Copy this json script + Done editing
+---
+
+## 🚀 6.1 Sentinel Workbook (Recent Method)
+
+1. Open [Microsoft Sentinel Workbooks](https://security.microsoft.com/sentinel/ba4ff38f-0dee-45af-8b8b-0d92f1d17290/rg-cybershield/law-cybershield/workbooks?tid=60448f2a-c3b7-4368-b20e-916bda32b12d).  
+2. Click **Add Workbook** → **Edit**.  
+3. Remove existing content.  
+4. Click **Add** → **Add Data Source + Visualization** → **Advanced Editor**.  
+5. Import the JSON file for each use case below and click **Done Editing**.
+
+### 6.1.1 Windows RDP Authentication Failures
+   
  ```json
   {
   "type": 3,
@@ -48,8 +55,8 @@
 
 ![windows-rdp-auth-fail_Map](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/windows-rdp-auth-fail_Map.png)
 
- 2) linux-ssh-auth-fail
-   - Copy this json script + Done editing
+
+### 6.1.2 Linux SSH Authentication Failures
 
 ```json
 {
@@ -91,8 +98,9 @@
 
 ![linux-ssh-auth-fail_Map](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/linux-ssh-auth-fail_Map.png)
 
-3) mssql-auth-fail
-- Copy this json script + Done editing
+
+### 6.1.3 MSSQL Authentication Failures
+
 ```json
 {
   "type": 3,
@@ -131,16 +139,18 @@
 - click Save
 
 ---
+## 🚀 6.2 Analytics 
 
-# Analytics 
-
-- Go to Analtyics or Microsoft Defender Analytics ( Recent Method): (https://security.microsoft.com/sentinel/ba4ff38f-0dee-45af-8b8b-0d92f1d17290/rg-cybershield/law-cybershield/analytics?tid=60448f2a-c3b7-4368-b20e-916bda32b12d)
-- import the json file 
+1. Navigate to [Microsoft Sentinel Analytics](https://security.microsoft.com/sentinel/ba4ff38f-0dee-45af-8b8b-0d92f1d17290/rg-cybershield/law-cybershield/analytics?tid=60448f2a-c3b7-4368-b20e-916b-0d92f1d17290).  
+2. Import the JSON file containing your analytics rules.
 
 ![Analytics](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/Analytics.png)
 
-- Go to Microsoft Defender > Incidents & Alerts > Incidents
-- we can see Both Brute Force ATTEMPT for Windows & Linux
+
+## 🚀 6.3 Monitor Incidents
+
+1. Go to **Microsoft Defender** → **Incidents & Alerts** → **Incidents**.  
+2. You should see brute force attempts for both Windows and Linux.
 
 ![Incidents](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/Incidents.png)
 
@@ -149,3 +159,8 @@
 ![Incident_Bruteforce_attempt](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/Incident_Bruteforce_attempt.png)
 
 ![Incident_Bruteforce_IPs](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/Incident_Bruteforce_IPs.png)
+
+---
+
+## ✅ Conclusion
+After completing the workbook and analytics setup, your Sentinel environment will display real-time maps and dashboards highlighting authentication failures and potential attacks. The integration with Microsoft Defender ensures that incidents are automatically tracked, providing actionable insights for security operations. This setup lays the foundation for continuous monitoring and effective incident response in your Azure environment.
