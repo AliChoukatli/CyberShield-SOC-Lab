@@ -64,6 +64,8 @@ To enable SQL Server to send logs to Windows Event Viewer:
 
 ![Event_view_sql_fail](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/Event_view_sql_fail.png)
 
+![SQL_success](
+
 ![event_attacker-login_fail](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/event_attacker-login_fail.png)
 
 
