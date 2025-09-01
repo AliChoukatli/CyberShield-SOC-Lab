@@ -124,7 +124,7 @@ CyberShield-SOC-Honeynet-Sentinel/
 
 | Metric | Description | Query |
 |--------|-------------|-------|
-| 🔹 Windows Security Events | Count all Windows security events | ``` `SecurityEvent \| count` | ```
+| 🔹 Windows Security Events | Count all Windows security events | `SecurityEvent \| count` |
 | 🔹 Linux Security Events | Count all Linux security events | `Syslog \| count` |
 | 🔹 Security Alerts | Count all security alerts except custom ones | `SecurityAlert \| where DisplayName !startswith "CUSTOM" \| count` |
 | 🔹 Security Incidents | Count all security incidents | `SecurityIncident \| count` |
