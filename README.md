@@ -71,7 +71,7 @@ CyberShield-SOC-Honeynet-Sentinel/
 │   ├── 07-Metrics.md                  # Before vs After hardening
 │   ├── 08-Compliance.md               # NIST mapping, Defender recommendations
 │   └── References.md                  # MS Docs, Josh Madakor, etc.
-├── 📂 Sentinel/
+├── 📂 Sentinel Resources/
 │   ├── windows-rdp-auth-fail.json
 │   ├── linux-ssh-auth-fail.json
 │   ├── mssql-auth-fail.json
