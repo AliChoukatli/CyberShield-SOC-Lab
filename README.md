@@ -70,7 +70,6 @@ CyberShield-SOC-Honeynet-Sentinel/
 │   ├── 06-Hardening.md                # NSG fix, Firewall, Defender for Cloud
 │   ├── 07-Metrics.md                  # Before vs After hardening
 │   ├── 08-Compliance.md               # NIST mapping, Defender recommendations
-│   └── References.md                  # MS Docs, Josh Madakor, etc.
 ├── 📂 Sentinel Resources/
 │   ├── windows-rdp-auth-fail.json
 │   ├── linux-ssh-auth-fail.json
