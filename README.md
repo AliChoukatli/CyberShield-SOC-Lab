@@ -1,5 +1,7 @@
-# CyberShield SOC Lab with Microsoft Sentinel
-
+# CyberShield: SOC Honeynet with Microsoft Sentinel
+![Azure](https://img.shields.io/badge/Azure-Sentinel-blue?logo=microsoftazure)
+![SOC](https://img.shields.io/badge/SOC-Lab-orange)
+![KQL](https://img.shields.io/badge/KQL-Queries-green)
 [![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/)
 
 
@@ -56,7 +58,7 @@ This lab is **for educational purposes only** and should not be used in producti
 
 ---
 
-# Project Structure
+## Project Structure
 ```
 CyberShield-SOC-Honeynet-Sentinel/
 ├── 📂 Documentation/
