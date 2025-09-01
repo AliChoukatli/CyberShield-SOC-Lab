@@ -71,16 +71,12 @@ CyberShield-SOC-Honeynet-Sentinel/
 │   ├── 07-Metrics.md                  # Before vs After hardening
 │   ├── 08-Compliance.md               # NIST mapping, Defender recommendations
 │   └── References.md                  # MS Docs, Josh Madakor, etc.
-├── 📂 Sentinel-Rules/
+├── 📂 Sentinel/
 │   ├── windows-rdp-auth-fail.json
 │   ├── linux-ssh-auth-fail.json
 │   ├── mssql-auth-fail.json
-│   └── impossible-travel.json
-├── 📂 KQL-Queries/
-│   ├── WindowsEventQuery.kql
-│   ├── LinuxSyslogQuery.kql
-│   ├── SQLAuthFailQuery.kql
-│   └── GeoIP_Watchlist_Query.kql
+│   ├── geoip-summarized.csv
+├── 📂 Screenshots/
 ├── README.md
 └── LICENSE.md
 ```
