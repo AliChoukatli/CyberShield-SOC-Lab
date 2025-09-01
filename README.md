@@ -36,7 +36,7 @@ This lab is **for educational purposes only** and should not be used in producti
 
 ---
 
-## Features
+## ⚡ Features
 
 - **Honeynet Deployment**: Exposed VMs to attract malicious traffic.
 - **Log Collection**: Centralized in Azure Log Analytics.
@@ -50,7 +50,7 @@ This lab is **for educational purposes only** and should not be used in producti
 
 ---
 
-## Prerequisites
+## 📋 Prerequisites
 
 - Azure subscription with sufficient credits (at least 2 vCPUs + 4GB RAM per VM).
 - Permissions to create resource groups, virtual networks, and enable Microsoft Sentinel.
@@ -58,7 +58,7 @@ This lab is **for educational purposes only** and should not be used in producti
 
 ---
 
-## Project Structure
+## 📂 Project Structure
 ```
 CyberShield-SOC-Honeynet-Sentinel/
 ├── 📂 Documentation/
@@ -86,7 +86,7 @@ CyberShield-SOC-Honeynet-Sentinel/
 ```
 ---
 
-## Deployment Steps
+## 🚀 Deployment Steps
 
 1. **Create Resource Group & VNet**
    ```bash
@@ -122,71 +122,18 @@ CyberShield-SOC-Honeynet-Sentinel/
 
 ## 📊 KQL Queries
 
-### 🔹 Security Events (Windows VMs) - Count all Windows security events
-```kql
-SecurityEvent
-| count
-```
+| Metric | Description | Query |
+|--------|-------------|-------|
+| 🔹 Windows Security Events | Count all Windows security events | `SecurityEvent \| count` |
+| 🔹 Linux Security Events | Count all Linux security events | `Syslog \| count` |
+| 🔹 Security Alerts | Count all security alerts except custom ones | `SecurityAlert \| where DisplayName !startswith "CUSTOM" \| count` |
+| 🔹 Security Incidents | Count all security incidents | `SecurityIncident \| count` |
+| 🔹 Failed RDP Logins | Detect brute force attempts on Windows | `SecurityEvent \| where EventID == 4625 \| summarize FailedLogins=count() by Account, IPAddress, bin(TimeGenerated, 1h)` |
+| 🔹 Failed SSH Logins | Detect brute force attempts on Linux | `Syslog \| where Facility=="auth" \| where SyslogMessage startswith "Failed password for" \| summarize FailedLogins=count() by SourceIP, HostName, bin(TimeGenerated,1h)` |
+| 🔹 MSSQL Authentication Failures | Detect brute force attempts on SQL Server | `Event \| where EventLog=="Application" \| where EventID==18456 \| summarize FailedLogins=count() by AttackerIP, Computer, bin(TimeGenerated,1h)` |
+| 🔹 Impossible Travel Detection | Detect suspicious logins | `SigninLogs \| summarize Locations=makeset(Location) by UserPrincipalName, bin(TimeGenerated,1h) \| where array_length(Locations) > 1` |
+| 🔹 Unusual Location Sign-ins | Detect logins from unusual locations | `SigninLogs \| summarize count() by UserPrincipalName, Location, bin(TimeGenerated,1h) \| order by count_ desc` |
 
-### 🔹 Security Events (Linux VMs) - Count all Linux security events
-```kql
-Syslog
-| count
-```
-
-### 🔹 Security Alerts (Microsoft Defender for Cloud) - Count all security alerts except custom ones
-```kql
-SecurityAlert
-| where DisplayName !startswith "CUSTOM"
-| count
-```
-
-### 🔹 SecurityIncident - Count all security incidents
-
-```kql
-SecurityIncident
-| count
-```
-
-### 🔹 Failed RDP Logins (Windows) – Detect brute force attempts
-
-```kql
-SecurityEvent
-| where EventID == 4625
-| summarize FailedLogins=count() by Account, IPAddress, bin(TimeGenerated, 1h)
-```
-
-🔹 Failed SSH Logins (Linux) – Detect brute force attempts
-
-```kql
-Syslog
-| where Facility == "auth"
-| where SyslogMessage startswith "Failed password for"
-| summarize FailedLogins=count() by SourceIP, HostName, bin(TimeGenerated, 1h)
-```
-
-🔹 MSSQL Authentication Failures – Detect brute force attempts on SQL Server
-
-```kql
-Event
-| where EventLog == "Application"
-| where EventID == 18456
-| summarize FailedLogins=count() by AttackerIP, Computer, bin(TimeGenerated, 1h)
-```
-🔹 Impossible Travel Detection – Detect suspicious logins
-
-```kql
-SigninLogs
-| summarize Locations=makeset(Location) by UserPrincipalName, bin(TimeGenerated, 1h)
-| where array_length(Locations) > 1
-```
-🔹 Unusual Location Sign-ins – Detect logins from unusual locations
-
-```kql
-SigninLogs
-| summarize count() by UserPrincipalName, Location, bin(TimeGenerated, 1h)
-| order by count_ desc
-```
 ---
 
 ## Deliverables
@@ -211,11 +158,11 @@ Through simulated attacks and monitoring, we gained insights into:
 
 ---
 
-## Disclaimer
+## ⚠️ Disclaimer
 This project is intended **for educational and training purposes only**. Do not expose production systems or sensitive environments to malicious traffic.
 
 ---
 
-## Author
+## 👤 Author
 **Ali Choukatli**  
 Cybersecurity Enthusiast | SOC & Endpoint Security | Azure Sentinel Projects
