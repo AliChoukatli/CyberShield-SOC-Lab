@@ -163,6 +163,13 @@ This project is intended **for educational and training purposes only**. Do not 
 
 ---
 
+## References & Inspiration
+
+- Inspired by [kphillip1's Azure SOC Honeynet Lab](https://github.com/kphillip1/azure-soc-honeynet)
+
+---
+
 ## 👤 Author
 **Ali Choukatli**  
 Cybersecurity Enthusiast | SOC & Endpoint Security | Azure Sentinel Projects
+
