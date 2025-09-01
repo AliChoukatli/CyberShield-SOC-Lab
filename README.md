@@ -173,8 +173,20 @@ Event
 | where EventID == 18456
 | summarize FailedLogins=count() by AttackerIP, Computer, bin(TimeGenerated, 1h)
 ```
+🔹 Impossible Travel Detection – Detect suspicious logins
 
+```kql
+SigninLogs
+| summarize Locations=makeset(Location) by UserPrincipalName, bin(TimeGenerated, 1h)
+| where array_length(Locations) > 1
+```
+🔹 Unusual Location Sign-ins – Detect logins from unusual locations
 
+```kql
+SigninLogs
+| summarize count() by UserPrincipalName, Location, bin(TimeGenerated, 1h)
+| order by count_ desc
+```
 ---
 
 ## Deliverables
