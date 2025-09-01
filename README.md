@@ -166,5 +166,4 @@ This project is intended **for educational and training purposes only**. Do not 
 
 ## 👤 Author
 **Ali Choukatli**  
-Cybersecurity Enthusiast | SOC & Endpoint Security | Azure Sentinel Projects
-
+CyberSec Enthusiast | IAM | SOC | Endpoint Security
