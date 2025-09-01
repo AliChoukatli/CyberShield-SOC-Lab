@@ -120,22 +120,60 @@ CyberShield-SOC-Honeynet-Sentinel/
 
 ---
 
-## Example KQL Queries
+## 📊 KQL Queries
 
-- **Failed RDP Logins**
-  ```kql
-  SecurityEvent
-  | where EventID == 4625
-  | where AccountType == "User"
-  | summarize count() by Account, IPAddress, bin(TimeGenerated, 1h)
-  ```
+### 🔹 Security Events (Windows VMs) - Count all Windows security events
+```kql
+SecurityEvent
+| count
+```
 
-- **Impossible Travel Detection**
-  ```kql
-  SigninLogs
-  | summarize makeset(Location) by UserPrincipalName, bin(TimeGenerated, 1h)
-  | where array_length(makeset(Location)) > 1
-  ```
+### 🔹 Security Events (Linux VMs) - Count all Linux security events
+```kql
+Syslog
+| count
+```
+
+### 🔹 Security Alerts (Microsoft Defender for Cloud) - Count all security alerts except custom ones
+```kql
+SecurityAlert
+| where DisplayName !startswith "CUSTOM"
+| count
+```
+
+### 🔹 SecurityIncident - Count all security incidents
+
+```kql
+SecurityIncident
+| count
+```
+
+### 🔹 Failed RDP Logins (Windows) – Detect brute force attempts
+
+```kql
+SecurityEvent
+| where EventID == 4625
+| summarize FailedLogins=count() by Account, IPAddress, bin(TimeGenerated, 1h)
+```
+
+🔹 Failed SSH Logins (Linux) – Detect brute force attempts
+
+```kql
+Syslog
+| where Facility == "auth"
+| where SyslogMessage startswith "Failed password for"
+| summarize FailedLogins=count() by SourceIP, HostName, bin(TimeGenerated, 1h)
+```
+
+🔹 MSSQL Authentication Failures – Detect brute force attempts on SQL Server
+
+```kql
+Event
+| where EventLog == "Application"
+| where EventID == 18456
+| summarize FailedLogins=count() by AttackerIP, Computer, bin(TimeGenerated, 1h)
+```
+
 
 ---
 
