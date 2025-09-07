@@ -18,12 +18,12 @@ We will modify Network Security Group (NSG) rules, open critical ports, and disa
 ### Create new rule for any source
 - Allow RDP from any source.
 
-![NSG_Win_Rule_any](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/NSG_Win_Rule_any.png)
+![NSG_Win_Rule_any](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/NSG_Win_Rule_any.png)
 
 ### Test RDP Access
 - Connect to the Windows VM using its Public IP:
 
-![Win_IP](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/win_ip.png)
+![Win_IP](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/win_ip.png)
 
 ### Disable Windows Firewall
 - Turn off Firewall for all profiles using Advanced Firewall Settings.
@@ -37,12 +37,12 @@ We will modify Network Security Group (NSG) rules, open critical ports, and disa
 ### Remove SSH rule
 - Delete the default SSH rule.
 
-![NSG_Windows_Delete_SSH_Rule](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/NSG_Windows_Delete_SSH_Rule.png)
+![NSG_linux_Delete_SSH_Rule](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/NSG_Windows_Delete_SSH_Rule.png)
 
 ### Create a rule allowing all traffic
 - Allow any traffic to Linux VM.
 
-![NSG_Linux_Rule_any](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/NSG_linux_Rule_any.png)
+![NSG_Linux_Rule_any](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/NSG_linux_Rule_any.png)
 
 ---
 
