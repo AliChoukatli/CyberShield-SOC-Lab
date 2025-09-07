@@ -76,6 +76,8 @@ now let's connect to our linux vm using ssh:
 - Go to Virtual machines > Create > > Create a new Ressource Group as 'RG-Attacker' and
 - Name the machine as 'attacker-vm'
 - On network tab > create a new vnet for windows > eg : attacker-vm-vnet > Review & Create
+
+![Attacker_Vm_Creation](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/attacker-vm-creation.png)
      
 ### RDP Attacker Windows machine using its Public IP
 
