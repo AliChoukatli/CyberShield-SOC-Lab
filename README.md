@@ -63,32 +63,40 @@ This lab is **for educational purposes only** and should not be used in producti
 
 ---
 
-* **[Part 1: Environment Setup](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Documentation/01-Environment-Setup.md)**
-    * 1.1: Resource Group, VMs (Windows/Linux), SQL Server
+# CyberShield SOC Lab - Documentation Overview
 
-* **[Part 2: Vulnerabilities & Configuration](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Documentation/02-Vulnerabilities.md)**
-    * 2.1: RDP/SSH open, Firewall OFF, SQL misconfig
+* **[Part 1: Environment Setup](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Documentation/01-Environment-Setup.md)**  
+    * 1.1: Resource Groups, Windows/Linux VMs, SQL Server
 
-* **[Part 3: Attacker VM & Log Generation](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Documentation/03-Attacker_VM-%26-Log_Generation.md)**
+* **[Part 2: Vulnerabilities & Configuration](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Documentation/02-Vulnerabilities.md)**  
+    * 2.1: RDP/SSH open, Firewall OFF, SQL misconfiguration
+
+* **[Part 3: Attacker VM & Log Generation](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Documentation/03-Attacker_VM-%26-Log_Generation.md)**  
     * 3.1: Attacker VM, brute force attempts, Event Viewer, Syslog
 
-* **[Part 4: Log Ingestion](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Documentation/04-Log-Ingestion.md)**
-    * 4.1: LAW, AMA, DCR, Syslog, Windows Events
+* **[Part 4: Sentinel Integration](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Documentation/04-Log-Ingestion.md)**  
+    * 4.1: Log Analytics Workspace (LAW) creation  
+    * 4.2: Microsoft Sentinel setup & Watchlists  
+    * 4.3: Microsoft Defender for Cloud configuration  
+    * 4.4: Storage Accounts logging  
+    * 4.5: NSG Flow Logs  
+    * 4.6: Data Collection Rules (Linux Syslog)  
+    * 4.7: Windows Security Events via AMA & DCR  
+    * 4.8: Verify collected logs  
+    * 4.9: Entra ID logs  
+    * 4.10: User creation & activity logs  
+    * 4.11: Activity Logs export  
+    * 4.12: Additional logs via Storage Accounts & Key Vault
 
-* **[Part 5: Microsoft Sentinel Setup](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Documentation/05-Sentinel-Setup.md)**
+* **[Part 5: Microsoft Sentinel Setup](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Documentation/05-Sentinel-Setup.md)**  
     * 5.1: Watchlists, Analytics Rules, Workbooks, Incidents
 
-* **[Part 6: Sentinel-Workbooks_&_Analytics](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Documentation/06-Sentinel-Workbooks_%26_Analytics.md)**
-    * 6.1: Custom Workbooks and Analytics Rules Configuration
+* **[Part 6: Hardening & Incident Management](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Documentation/06-Hardening.md)**  
+    * 6.1: Linux & Windows NSG rules, Firewall, Defender for Cloud recommendations  
+    * 6.2: Incident management in Sentinel
 
-* **[Part 7: Hardening](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Documentation/07-Hardening.md)**
-    * 7.1: NSG fix, Firewall, Defender for Cloud
-
-* **[Part 8: Metrics](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Documentation/08-Metrics.md)**
-    * 8.1: Metrics and reporting – Before vs After hardening
-
-* **[Part 9: Compliance](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Documentation/09-Compliance.md)**
-    * 9.1: NIST mapping, Defender recommendations
+* **[Part 7: Metrics Before & After Hardening](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Documentation/07-Metrics.md)**  
+    * 7.1: Security metrics and reporting – Before vs After
 
 ---
 
