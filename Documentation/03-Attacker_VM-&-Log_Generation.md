@@ -13,7 +13,7 @@ This prepares the environment for log ingestion and analysis in Microsoft Sentin
 
 ---
 
-## 🚀 1. Attack Simulation & Log Generation
+## 🚀 3.1 - Attack Simulation & Log Generation
 
 ### 1.1 On Windows VM
 
@@ -33,7 +33,7 @@ This prepares the environment for log ingestion and analysis in Microsoft Sentin
 ----
 
 
-## 🚀 2. SQL Server Audit Configuration (Windows VM)
+## 🚀 3.2 - SQL Server Audit Configuration (Windows VM)
 
 To enable SQL Server to send logs to Windows Event Viewer:
 
@@ -60,9 +60,9 @@ auditpol /set /subcategory:"application generated" /success:enable /failure:enab
 ![SSMS_Success_Fail](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/SSMS_Success_Fail.png))
 
 
-## 🚀 3. Viewing Logs
+## 🚀 3.3 - Viewing Logs
 
-### 3.1 On Windows VM
+### 3.3.1 - On Windows VM
 
 - Open Event Viewer to check:
   - Failed RDP attempts
@@ -73,7 +73,7 @@ auditpol /set /subcategory:"application generated" /success:enable /failure:enab
 ![event_attacker-login_fail](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/event_attacker-login_fail.png)
 
 
-### 3.2 On Linux VM
+### 3.3.2 - On Linux VM
 
 ```bash
 cd /var/log
