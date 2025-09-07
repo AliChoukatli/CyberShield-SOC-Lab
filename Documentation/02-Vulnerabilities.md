@@ -7,7 +7,7 @@ We will modify Network Security Group (NSG) rules, open critical ports, and disa
 
 ---
 
-## 🚀 2.1 Windows VM Vulnerabilities
+## 🚀 2.1 - Windows VM Vulnerabilities
 
 ### Remove existing RDP rule
 
@@ -32,7 +32,7 @@ We will modify Network Security Group (NSG) rules, open critical ports, and disa
 
 ---
 
-## 🚀 2.2 Linux VM Vulnerabilities
+## 🚀 2.2 - Linux VM Vulnerabilities
 
 ### Remove SSH rule
 - Delete the default SSH rule.
