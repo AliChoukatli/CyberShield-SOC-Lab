@@ -49,7 +49,7 @@ _GetWatchlist("geoip")
 
 1. Go to **Microsoft Defender for Cloud** → *Environment Settings*.  
 
-![Env_Setting](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/Environment_Setting.png)
+![Env_Setting](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/Environment_Setting.png)
 
 2. Select your workspace `LAW-CyberShield` → **Defender Plans** → turn **Servers** ON → **Save**.  
 
