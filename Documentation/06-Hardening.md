@@ -53,7 +53,7 @@ After hardening, you can manage incidents in Microsoft Defender / Sentinel:
 
 ---
 
-# 🚀 6.5 - Additional Hardening - Microsoft Defender for Cloud Recommendations
+## 🚀 6.5 - Additional Hardening - Microsoft Defender for Cloud Recommendations
 
 To further secure your environment, leverage the security recommendations provided by **Microsoft Defender for Cloud**:
 
