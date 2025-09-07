@@ -5,7 +5,7 @@ This section covers the creation and configuration of Microsoft Sentinel Workboo
 
 ---
 
-## 🚀 6.1 Sentinel Workbook
+## 🚀 5.1 Sentinel Workbook
 
 1. Open [Microsoft Sentinel Workbooks](https://security.microsoft.com/sentinel/ba4ff38f-0dee-45af-8b8b-0d92f1d17290/rg-cybershield/law-cybershield/workbooks?tid=60448f2a-c3b7-4368-b20e-916bda32b12d).  
 2. Click **Add Workbook** → **Edit**.  
@@ -56,7 +56,7 @@ This section covers the creation and configuration of Microsoft Sentinel Workboo
 ![windows-rdp-auth-fail_Map](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/windows-rdp-auth-fail_Map.png)
 
 
-### 6.1.2 Linux SSH Authentication Failures
+### 5.1.2 Linux SSH Authentication Failures
 
 ```json
 {
@@ -99,7 +99,7 @@ This section covers the creation and configuration of Microsoft Sentinel Workboo
 ![linux-ssh-auth-fail_Map](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/linux-ssh-auth-fail_Map.png)
 
 
-### 6.1.3 MSSQL Authentication Failures
+### 5.1.3 MSSQL Authentication Failures
 
 ```json
 {
@@ -139,7 +139,7 @@ This section covers the creation and configuration of Microsoft Sentinel Workboo
 - click Save
 
 ---
-## 🚀 6.2 Analytics 
+## 🚀 5.2 Analytics 
 
 1. Navigate to [Microsoft Sentinel Analytics](https://security.microsoft.com/sentinel/ba4ff38f-0dee-45af-8b8b-0d92f1d17290/rg-cybershield/law-cybershield/analytics?tid=60448f2a-c3b7-4368-b20e-916b-0d92f1d17290).  
 2. Import the JSON file containing your analytics rules.
@@ -147,7 +147,7 @@ This section covers the creation and configuration of Microsoft Sentinel Workboo
 ![Analytics](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/Analytics.png)
 
 
-## 🚀 6.3 Monitor Incidents
+## 🚀 5.3 Monitor Incidents
 
 1. Go to **Microsoft Defender** → **Incidents & Alerts** → **Incidents**.  
 2. You should see brute force attempts for both Windows and Linux.
