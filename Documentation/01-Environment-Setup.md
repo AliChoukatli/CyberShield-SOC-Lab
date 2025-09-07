@@ -9,13 +9,13 @@ All steps are accompanied by screenshots to ensure clarity and reproducibility.
 
 ---
 
-## 🚀 1.1 Resource Groups Creation (e.g., RG-CyberShield)
+## 🚀 1.1 - Resource Groups Creation (e.g., RG-CyberShield)
 
 - Go to Ressource Groups > Create > Name your Ressource Group : (EG: RG-CyberShield)
 
 ---
 
-## 🚀 1.2 Windows VM Setup
+## 🚀 1.2 - Windows VM Setup
 
 - Go to Virtual machines > Create > name it windows-vm
 - on network tab > Create a new vnet > eg : CyberShield-Vnet > Review & Create
@@ -32,7 +32,7 @@ All steps are accompanied by screenshots to ensure clarity and reproducibility.
 
 ---
 
-## 🚀 1.3 Linux VM Setup
+## 🚀 1.3 - Linux VM Setup
 
 - Go to Virtual machines > Create > name it linux-vm
 - On network tab > choose the same vnet for windows > eg : CyberShield-Vnet > Review & Create
@@ -49,7 +49,7 @@ now let's connect to our linux vm using ssh:
 
 ---
 
-## 🚀 1.4 SQL Database Download & Installation
+## 🚀 1.4 - SQL Database Download & Installation
 
 - Download SQL Server + ISO + Mount
 - Install SQL Server & SSMS
@@ -71,7 +71,7 @@ now let's connect to our linux vm using ssh:
 
 ---
 
-## 🚀 1.5 Attacker VM Setup
+## 🚀 1.5 - Attacker VM Setup
 
 - Create a new resource group: **RG-Attacker**
 - Create a Windows VM named **attacker-vm**
