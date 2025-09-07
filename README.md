@@ -63,7 +63,7 @@ This lab is **for educational purposes only** and should not be used in producti
 
 ---
 
-* **[Part1: Chapter 1: Environment Setup](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Documentation/01-Environment-Setup.md)**
+* **[Part 1: Environment Setup](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Documentation/01-Environment-Setup.md)**
     * 1.1: Resource Group, VMs (Windows/Linux), SQL Server
 
 * **[Part 2: Vulnerabilities & Configuration](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Documentation/02-Vulnerabilities.md)**
