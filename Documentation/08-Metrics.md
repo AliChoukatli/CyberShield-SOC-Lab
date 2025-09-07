@@ -1,4 +1,4 @@
-# 🔴 Metrics Before Hardening / Security Controls
+# 🔴 Part 8 - Metrics Before Hardening / Security Controls
 
 The table below presents the security metrics collected over a 24-hour period in our unprotected environment:
 
