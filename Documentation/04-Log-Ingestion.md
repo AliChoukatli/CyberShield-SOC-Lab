@@ -16,20 +16,19 @@ To enable SQL Server to send logs to Windows Event Viewer:
 3. Open **Registry Editor**, paste the key in the search bar.
 3. Open **Registry Editor**, paste the key in the search bar.
 
-![reg_fullcontrol](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/reg_fullcontrol.png)
+![reg_fullcontrol](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/reg_fullcontrol.png)
 
 5. Enable auditing using `auditpol` in Command Prompt:
 ```bash
   auditpol /set /subcategory:"application generated" /success:enable /failure:enable
 ```
 
-![audipol](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/audipol_Cmd.png)
-
+![audipol](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/audipol_Cmd.png)
 6. open SSMS -> put your crenedential
 - right click on windows-vm - Properties -> Security
 - Select Both failed and successful logins so we can see all logs
   
-![SSMS_Success_Fail](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/SSMS_Success_Fail.png)
+![SSMS_Success_Fail](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/SSMS_Success_Fail.png)
  
 7. click disconnect and reconnect.
 
