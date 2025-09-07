@@ -6,7 +6,7 @@ The table below presents the security metrics collected over a 24-hour period in
 Start Time: 2025-08-27 14:38  
 Stop Time: 2025-08-28 14:38  
 
-![Metric_Before](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/Metric_before.png)
+![Metric_Before](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/Metric_before.png)
 
 | Metric                   | Count
 | ------------------------ | -----
@@ -31,7 +31,7 @@ Stop Time: 2025-08-29 16:00
 | SecurityAlert            | 3
 | SecurityIncident         | 3
 
-![Metric_After](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/Metric_after.png)
+![Metric_After](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/Metric_after.png)
 
 ✅ **Observation:**  
 The hardening and security measures significantly reduced the number of security events, syslog messages, alerts, and incidents, demonstrating an improved security posture and a lower attack surface.
