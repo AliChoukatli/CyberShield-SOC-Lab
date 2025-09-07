@@ -12,12 +12,12 @@ To mitigate brute force attempts on Linux systems:
 
 1. Identify the custom alert: **CUSTOM: Brute Force ATTEMPT - Linux Syslog**.
   
-![Eg_Brute Force ATTEMPT - Linux Syslog](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/Eg_Brute%20Force%20ATTEMPT%20-%20Linux%20Syslog.png)
+![Eg_Brute Force ATTEMPT - Linux Syslog](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/Eg_Brute%20Force%20ATTEMPT%20-%20Linux%20Syslog.png)
 
 2. Go to **Network Security Groups (NSG)** in Azure.
 3. Edit the rule **110** and change **Source IP** from `* (Any)` to **your own IP address**.
 
-![Linux_Rule_fix](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/Linux_Rule_fix.png)
+![Linux_Rule_fix](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/Linux_Rule_fix.png)
 
 ## Windows NSG Rule Hardening
 
@@ -26,7 +26,7 @@ Similarly, for Windows systems:
 1. Navigate to the Windows NSG.
 2. Edit the rule **100** and change **Source IP** from `* (Any)` to **your own IP address**.
 
-![Windows_Rule_fix](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/Windows_Rule_fix.png)
+![Windows_Rule_fix](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/Windows_Rule_fix.png)
 
 ---
 
@@ -47,7 +47,7 @@ After hardening, you can manage incidents in Microsoft Defender / Sentinel:
 1. Select an incident (e.g., **Windows Brute Force Attempt**).
 2. Fill in the required information and **Save** the incident.
 
-![Manage_Incident](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/Manage_Incident.png)
+![Manage_Incident](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/Manage_Incident.png)
 
 > Proper NSG rule hardening and firewall configuration help mitigate brute force attacks, while incident management ensures security events are tracked and resolved efficiently.
 
@@ -59,13 +59,13 @@ To further secure your environment, leverage the security recommendations provid
 
 1. Navigate to **Microsoft Defender for Cloud** → **Security Posture** → **Recommendations**.
 
-![Defender_Recommendations](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/Defender_Recommendations.png)
+![Defender_Recommendations](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/Defender_Recommendations.png)
 
 2. Review the suggested actions and implement relevant recommendations to strengthen your cloud security posture.
 
    **Example:** Enable **Azure Backup** for virtual machines to ensure data protection and recovery.
 
-![recomm_Backup](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/recomm_Backup.png)
+![recomm_Backup](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/recomm_Backup.png)
 
 ---
 
