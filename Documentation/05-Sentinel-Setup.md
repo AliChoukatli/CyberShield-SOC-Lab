@@ -31,7 +31,7 @@ This setup is the foundation for effective security monitoring, alerting, and in
    - Download & upload the [CSV file](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Sentinel/geoip-summarized.csv) 
    - SearchKey: `Network` → **Create**
 
-![Watchlist_Sentinel](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/watchlist_Sentinel.png)
+![Watchlist_Sentinel](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/watchlist_Sentinel.png)
 
 4. Go to **Logs**.
 5. Run the query to check if events are collected:
@@ -41,7 +41,7 @@ _GetWatchlist("geoip")
 ```
 > You should see **54,803 entries**.
 
-![Count_geoip](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/Count_geoip.png)
+![Count_geoip](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/geoip_count.png)
 
 --- 
 
@@ -61,12 +61,12 @@ _GetWatchlist("geoip")
    - Storage  
    - Key Vault 
 
-![Def_plans](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/Def_plans.png)
+![Def_plans](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/Def_Plans.png)
  
 5. Go to **Settings** → *Continuous Export* → Log Analytics Workspace tab → select all **Exported data types**.  
 6. Select **Resource Group** (`RG-CyberShield`) and **Target Workspace** (`LAW-CyberShield`) → **Save**.  
 
-![Continuous_Export](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/Continuous%20export.png)
+![Continuous_Export](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/Continuous%20export.png)
 
 ---- 
 
@@ -75,7 +75,7 @@ _GetWatchlist("geoip")
 1. Go to **Azure** → *Storage Accounts* → **Create**.  
 2. Select your **Resource Group**, enter a unique name → **Review + Create**. 
 
-![Storage creation](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/storage_creation.png)
+![Storage creation](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/storage_creation.png)
 
 --- 
 
@@ -86,7 +86,7 @@ _GetWatchlist("geoip")
 3. Add target resources: **Linux VM** and **Windows VM**.  
 4. Go to **Analytics** tab → set interval to **Every 10 min** → **Create**.  
 
-![NSG_flow](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/NSG_Flow.png)
+![NSG_flow](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/NSG_Flow.png)
 
 ----
 
@@ -117,15 +117,15 @@ Microsoft now uses **Azure Monitor Agent (AMA)** with **Data Collection Rules (D
    - **Subscription**: your Azure subscription  
    - **Resource Group**: `RG-CyberShield`  
 
-![Windows_Events_Basic](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/Windows_Events_Basic.png)
+![Windows_Events_Basic](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/Windows_Events_Basic.png)
 
 5. Go to **Resources** → select your **Windows VM(s)**.  
 
-![Windows_Events_Resource](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/Windows_Events_Resource.png)
+![Windows_Events_Resource](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/Windows_Events_Resource.png)
 
 6. Go to **Collect** → select **All Security Events** (ensures both Success & Failure audits are collected).  
 
-![Windows_Events_Review](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/Windows_Events_Review.png)
+![Windows_Events_Review](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/Windows_Events_Review.png)
   
 7. Click **Review + Create** → **Create**.
 
@@ -144,7 +144,7 @@ SecurityEvent
 | take 10
 ```
 
-![Security_Event_KQL](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/Security_Event_KQL.png)
+![Security_Event_KQL](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/Security_Event_KQL.png)
 
 ### Linux 
 
@@ -157,7 +157,7 @@ Syslog
 | take 10
 ```
 
-![syslog_KQL](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/syslog_KQL.png)
+![syslog_KQL](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/syslog_KQL.png)
 
 ---
 
@@ -169,7 +169,7 @@ Syslog
    - SignInLogs  
 3. Set the destination: **Send to Log Analytics Workspace** → **Save**.  
 
-![DS](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/DS.png)
+![DS](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/DS.png)
 
 ---
 
@@ -183,7 +183,7 @@ Syslog
    - Create a new password → sign in.  
 4. Return to **Log Analytics Workspace** → **Logs** to verify the generated logs.  
 
-![auditlogs_test](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/auditlogs_test.png)
+![auditlogs_test](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/auditlogs_test.png)
 
 ---
 
@@ -201,7 +201,7 @@ Syslog
    - ResourceHealth  
 3. Send to **Log Analytics Workspace** → **Save**.  
 
-- ![Azure_Activity](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/Azure_Activity.png)
+- ![Azure_Activity](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/Azure_Activity.png)
 
 ---
 
@@ -212,7 +212,7 @@ Syslog
 1. Go to **Storage Accounts** → *Monitoring* → **Diagnostic Settings** → select **Blob** → **+ Add Diagnostic Setting**.  
 2. Go back → *Data Storage* → **Containers** → create a test container named `test`.  
 
-![DS_blob](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/DS_blob.png)
+![DS_blob](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/DS_blob.png)
 
 ---
 
@@ -221,18 +221,18 @@ Syslog
 
 1. Go to **Key Vaults** → **+ Create** → enter a name (e.g., `test20250828`).
 
-![Keyvault_secret](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/keyvault_secret.png)
+![Keyvault_secret](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/keyvault_secret.png)
 
 2. Access configuration → select **Vault Access Policy** → choose a user (e.g., Ali Choukatli) → **Review + Create**.
 3. Select the Key Vault → **Secrets** → **Generate/Import** → provide a name & secret value.
 4. Select the secret → **Show Secret Value**.  
    > This action will trigger logs.
 
-![Secret_Value](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/Secret_value.png)
+![Secret_Value](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/Secret_value.png)
 
 5. Go to **Log Analytics Workspace** → run the query:
 
-![StorageBlobLogs_KQL](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/StorageBlobLogs_KQL.png)
+![StorageBlobLogs_KQL](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/StorageBlobLogs_KQL.png)
 
 ---
 
