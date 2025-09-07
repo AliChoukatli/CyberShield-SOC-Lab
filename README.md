@@ -69,7 +69,7 @@ This lab is **for educational purposes only** and should not be used in producti
 * **[Part 2: Vulnerabilities & Configuration](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Documentation/02-Vulnerabilities.md)**
     * 2.1: RDP/SSH open, Firewall OFF, SQL misconfig
 
-* **[Part 3: Attack Simulation & Logs](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Documentation/03-Attacks-Logs.md)**
+* **[Part 3: Attacker VM & Log Generation](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Documentation/03-Attacker_VM-%26-Log_Generation.md)**
     * 3.1: Attacker VM, brute force attempts, Event Viewer, Syslog
 
 * **[Part 4: Log Ingestion](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Documentation/04-Log-Ingestion.md)**
