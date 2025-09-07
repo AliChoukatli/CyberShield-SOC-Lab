@@ -14,14 +14,14 @@ This section demonstrates how we simulate attacks from the Attacker VM and gener
      
 ### RDP Attacker VM using Public IP
 
-![attacker_RDP_Win](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/attacker_RDP_Win.png)
+![attacker_RDP_Win](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/attacker_RDP_Win.png)
 
 ## 🚀 3.2 Attacker Logs - Windows
 
 - RDP from **Attacker_VM** to **Windows_VM** using wrong credentials to generate logs
 - Install SSMS on the attacker machine and attempt 2 wrong logins followed by 1 correct login
 
-![attacker-ssms-fail](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/attacker-ssms-fail.png)
+![attacker-ssms-fail](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/attacker-ssms-fail.png)
 
 --- 
 
@@ -29,16 +29,16 @@ This section demonstrates how we simulate attacks from the Attacker VM and gener
 
 - From Linux VM, attempt SSH connections with wrong passwords to generate logs
 
-![attacker-ssh-connect-fail](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/attacker-ssh-connect-fail.png)
+![attacker-ssh-connect-fail](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/attacker-ssh-connect-fail.png)
 
 ----
 ## 3.4 Viewing Logs on Windows VM
 
 - Open **Event Viewer** to see generated logs from previous exercises. 
 
-![Event_view_sql_fail](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/Event_view_sql_fail.png)
+![Event_view_sql_fail](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/Event_view_sql_fail.png)
 
-![event_attacker-login_fail](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/event_attacker-login_fail.png)
+![event_attacker-login_fail](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/event_attacker-login_fail.png)
 
 ---
 
@@ -50,9 +50,9 @@ Now, let's access the Linux VM and inspect the logs that were generated during t
 cd /var/log 
 cat auth.log | grep password to view logs
 ```
-![cat_auth_log](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/cat_auth_log.png)
+![cat_auth_log](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/cat_auth_log.png)
 
-![cat_auth_log_fail_success](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/cat_auth_log_fail_success.png)
+![cat_auth_log_fail_success](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/cat_auth_log_fail_success.png)
 
 ---
 
