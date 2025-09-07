@@ -6,7 +6,7 @@ Hardening your cloud environment is a critical step in reducing attack surfaces 
 
 ---
 
-## Linux NSG Rule Hardening
+## 🚀 6.1 - Linux NSG Rule Hardening
 
 To mitigate brute force attempts on Linux systems:
 
@@ -19,7 +19,7 @@ To mitigate brute force attempts on Linux systems:
 
 ![Linux_Rule_fix](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/Linux_Rule_fix.png)
 
-## Windows NSG Rule Hardening
+## 🚀 6.2 - Windows NSG Rule Hardening
 
 Similarly, for Windows systems:
 
@@ -30,7 +30,7 @@ Similarly, for Windows systems:
 
 ---
 
-## Firewall Mitigation
+## 🚀 6.3 - Firewall Mitigation
 
 To ensure Windows VM is properly secured:
 
@@ -40,7 +40,7 @@ To ensure Windows VM is properly secured:
 
 ---
 
-## Managing Incidents
+## 🚀 6.4 - Managing Incidents
 
 After hardening, you can manage incidents in Microsoft Defender / Sentinel:
 
@@ -53,7 +53,7 @@ After hardening, you can manage incidents in Microsoft Defender / Sentinel:
 
 ---
 
-# Additional Hardening - Microsoft Defender for Cloud Recommendations
+# 🚀 6.5 - Additional Hardening - Microsoft Defender for Cloud Recommendations
 
 To further secure your environment, leverage the security recommendations provided by **Microsoft Defender for Cloud**:
 
