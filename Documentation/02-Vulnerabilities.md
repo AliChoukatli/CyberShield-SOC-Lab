@@ -1,4 +1,4 @@
-# 🔴  02 - Vulnerabilities Setup
+# 🔴  Part 2 - Vulnerabilities Setup
 
 ## 📝 Introduction
 
