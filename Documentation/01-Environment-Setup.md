@@ -1,4 +1,4 @@
-# 🔴 01 Environment Setup
+# 🔴 Part 1 - Environment Setup
 
 ## 📝 Introduction
 
