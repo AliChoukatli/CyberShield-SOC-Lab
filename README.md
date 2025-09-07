@@ -66,7 +66,7 @@ This lab is **for educational purposes only** and should not be used in producti
 # CyberShield SOC Lab - Documentation Overview
 
 * **[Part 1: Environment Setup](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Documentation/01-Environment-Setup.md)**
-  * 1.1: Resource Groups, Windows/Linux VMs, SQL Server
+    * 1.1: Resource Groups, Windows/Linux VMs, SQL Server
   
 * **[Part 2: Vulnerabilities & Configuration](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Documentation/02-Vulnerabilities.md)**  
     * 2.1: RDP/SSH open, Firewall OFF, SQL misconfiguration
