@@ -13,7 +13,7 @@ This section covers the creation and configuration of Microsoft Sentinel Workboo
 4. Click **Add** → **Add Data Source + Visualization** → **Advanced Editor**.  
 5. Import the JSON file for each use case below and click **Done Editing**.
 
-### 6.1.1 Windows RDP Authentication Failures
+### 5.1.1 Windows RDP Authentication Failures
    
  ```json
   {
