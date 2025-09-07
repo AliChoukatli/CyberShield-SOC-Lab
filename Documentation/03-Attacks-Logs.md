@@ -13,22 +13,9 @@ This prepares the environment for log ingestion and analysis in Microsoft Sentin
 
 ---
 
-## 🚀 1. Attacker Machine Setup
+## 🚀 1. Attack Simulation & Log Generation
 
-- Create a new resource group: **RG-Attacker**
-- Create a Windows VM named **attacker-vm**
-- On the network tab, create a new VNet for the attacker VM (e.g., `attacker-vm-vnet`)
-- Review & Create.
-
-![Attacker_Vm_creation](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/attacker-vm-creation.png)
-     
-### RDP Attacker VM using Public IP
-
-![attacker_RDP_Win](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/attacker_RDP_Win.png)
-
-## 🚀 2. Attack Simulation & Log Generation
-
-### 2.1 On Windows VM
+### 1.1 On Windows VM
 
 1. From **Attacker VM**, attempt **RDP connections with wrong credentials**.  
 2. Install **SSMS** and try **2 wrong SQL logins** followed by **1 successful login**.  
@@ -37,7 +24,7 @@ This prepares the environment for log ingestion and analysis in Microsoft Sentin
 
 --- 
 
-### 2.2 On Linux VM
+### 1.2 On Linux VM
 
 - From Linux VM, attempt **SSH connections with wrong passwords** to generate logs
 
@@ -46,14 +33,14 @@ This prepares the environment for log ingestion and analysis in Microsoft Sentin
 ----
 
 
-## 🚀 3. SQL Server Audit Configuration (Windows VM)
+## 🚀 2. SQL Server Audit Configuration (Windows VM)
 
 To enable SQL Server to send logs to Windows Event Viewer:
 
 1. Open the [Microsoft documentation page](https://learn.microsoft.com/en-us/sql/relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log?view=sql-server-ver16) for guidance.
 
 
-Copy the registry key:
+2. Copy the registry key:
 
 ```pgsql
 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services/EventLog/Security
@@ -61,8 +48,8 @@ HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services/EventLog/Security
 
 ![reg_fullcontrol](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/reg_fullcontrol.png)
 
-2. Open Registry Editor, search and paste the key.
-3. Enable auditing using auditpol:
+3. Open Registry Editor, search and paste the key.
+4. Enable auditing using auditpol:
 
 ```bash
 auditpol /set /subcategory:"application generated" /success:enable /failure:enable
@@ -70,14 +57,14 @@ auditpol /set /subcategory:"application generated" /success:enable /failure:enab
 
 ![audipol](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/audipol_Cmd.png))
 
-4. In SSMS, enable logging for both successful and failed logins:
+5. In SSMS, enable logging for both successful and failed logins:
 
 ![SSMS_Success_Fail](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/SSMS_Success_Fail.png))
 
 
-## 🚀 4. Viewing Logs
+## 🚀 3. Viewing Logs
 
-### 4.1 On Windows VM
+### 3.1 On Windows VM
 
 - Open Event Viewer to check:
   - Failed RDP attempts
@@ -88,7 +75,7 @@ auditpol /set /subcategory:"application generated" /success:enable /failure:enab
 ![event_attacker-login_fail](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/event_attacker-login_fail.png)
 
 
-### 4.2 On Linux VM
+### 3.2 On Linux VM
 
 ```bash
 cd /var/log
@@ -99,8 +86,6 @@ cat auth.log | grep password
 ![cat_auth_log](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/cat_auth_log.png)
 
 ![cat_auth_log_fail_success](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/cat_auth_log_fail_success.png)
-
-
 
 ---
 
