@@ -13,7 +13,7 @@ We will modify Network Security Group (NSG) rules, open critical ports, and disa
 
 - Delete the RDP port 3389 rule to allow unrestricted access.
 
-![NSG_Windows_Delete_RDP_Rule](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/NSG_Windows_Delete_RDP_Rule.png)
+![NSG_Windows_Delete_RDP_Rule](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/NSG_Windows_Delete_RDP_Rule.png)
 
 ### Create new rule for any source
 - Allow RDP from any source.
@@ -28,7 +28,7 @@ We will modify Network Security Group (NSG) rules, open critical ports, and disa
 ### Disable Windows Firewall
 - Turn off Firewall for all profiles using Advanced Firewall Settings.
 
-![win_turnoff_firewall](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/win_turnoff_firewall.png)
+![win_turnoff_firewall](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/win_turnoff_firewall.png)
 
 ---
 
@@ -37,7 +37,7 @@ We will modify Network Security Group (NSG) rules, open critical ports, and disa
 ### Remove SSH rule
 - Delete the default SSH rule.
 
-![NSG_linux_Delete_SSH_Rule](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/NSG_Windows_Delete_SSH_Rule.png)
+![NSG_linux_Delete_SSH_Rule](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/NSG_ssh_Delete_SSH_Rule.png)
 
 ### Create a rule allowing all traffic
 - Allow any traffic to Linux VM.
