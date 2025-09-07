@@ -44,28 +44,6 @@ To enable SQL Server to send logs to Windows Event Viewer:
 - On the attacker machine, install **SSMS** and try to connect with **2 wrong passwords** and **1 correct password**.
 
 
-![attacker-ssms-fail](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/attacker-ssms-fail.png)
 
---- 
-
-### Linux VM
-- Generate logs by attempting **SSH connections** with wrong passwords from the Linux VM.
-
-![attacker-ssh-connect-fail](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/attacker-ssh-connect-fail.png)
-
----
-
-## 🚀 4.3 View Logs on Windows VM
-- Open **Event Viewer** on Windows VM.  
-- You should see the generated logs from **SQL Server** and **failed login attempts**.
-  
-- go to event viewer, and we can see some logs from our previous exercice 
-
-![Event_view_sql_fail](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/Event_view_sql_fail.png)
-
-![event_attacker-login_fail](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/event_attacker-login_fail.png)
-
-
----
 
 
