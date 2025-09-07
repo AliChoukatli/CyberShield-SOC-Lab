@@ -79,16 +79,16 @@ This lab is **for educational purposes only** and should not be used in producti
     * 5.1: Watchlists, Analytics Rules, Workbooks, Incidents
 
 * **[Part 6: Sentinel-Workbooks_&_Analytics](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Documentation/06-Sentinel-Workbooks_%26_Analytics.md)**
-    * 6.1: 
+    * 6.1: Custom Workbooks and Analytics Rules Configuration
 
 * **[Part 7: Hardening](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Documentation/07-Hardening.md)**
     * 7.1: NSG fix, Firewall, Defender for Cloud
 
 * **[Part 8: Metrics](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Documentation/08-Metrics.md)**
-    * 8.1: Before vs After hardening
+    * 8.1: Metrics and reporting – Before vs After hardening
 
 * **[Part 9: Compliance](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Documentation/09-Compliance.md)**
-    * 9.1 NIST mapping, Defender recommendations
+    * 9.1: NIST mapping, Defender recommendations
 
 ---
 
