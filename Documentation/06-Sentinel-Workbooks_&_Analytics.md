@@ -53,7 +53,7 @@ This section covers the creation and configuration of Microsoft Sentinel Workboo
 ```
    - you will see the map > click Save
 
-![windows-rdp-auth-fail_Map](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/windows-rdp-auth-fail_Map.png)
+![windows-rdp-auth-fail_Map](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/windows-rdp-auth-fail_Map.png)
 
 
 ### 6.1.2 Linux SSH Authentication Failures
@@ -96,7 +96,7 @@ This section covers the creation and configuration of Microsoft Sentinel Workboo
 ```
    - you will see the map > click Save
 
-![linux-ssh-auth-fail_Map](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/linux-ssh-auth-fail_Map.png)
+![linux-ssh-auth-fail_Map](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/linux-ssh-auth-fail_Map.png)
 
 
 ### 6.1.3 MSSQL Authentication Failures
@@ -144,7 +144,7 @@ This section covers the creation and configuration of Microsoft Sentinel Workboo
 1. Navigate to [Microsoft Sentinel Analytics](https://security.microsoft.com/sentinel/ba4ff38f-0dee-45af-8b8b-0d92f1d17290/rg-cybershield/law-cybershield/analytics?tid=60448f2a-c3b7-4368-b20e-916b-0d92f1d17290).  
 2. Import the JSON file containing your analytics rules.
 
-![Analytics](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/Analytics.png)
+![Analytics](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/Analytics.png)
 
 
 ## 🚀 6.3 Monitor Incidents
@@ -152,13 +152,13 @@ This section covers the creation and configuration of Microsoft Sentinel Workboo
 1. Go to **Microsoft Defender** → **Incidents & Alerts** → **Incidents**.  
 2. You should see brute force attempts for both Windows and Linux.
 
-![Incidents](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/Incidents.png)
+![Incidents](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/Incidents.png)
 
 - Example of Incident:
 
-![Incident_Bruteforce_attempt](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/Incident_Bruteforce_attempt.png)
+![Incident_Bruteforce_attempt](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/Incident_Bruteforce_attempt.png)
 
-![Incident_Bruteforce_IPs](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/Incident_Bruteforce_IPs.png)
+![Incident_Bruteforce_IPs](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/Incident_Bruteforce_IPs.png)
 
 ---
 
