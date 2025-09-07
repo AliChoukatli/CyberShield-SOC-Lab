@@ -39,7 +39,7 @@ All steps are accompanied by screenshots to ensure clarity and reproducibility.
 
 ![linux-vm-creation](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/linux-vm-creation.png)
 
-### we will ping our linux machine using the public IP
+### RDP Linux machine using its Public IP
 
 ![ping-linux](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/ping-linux.png)
 
