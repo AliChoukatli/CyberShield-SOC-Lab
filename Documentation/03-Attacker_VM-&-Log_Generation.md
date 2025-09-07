@@ -15,7 +15,7 @@ This prepares the environment for log ingestion and analysis in Microsoft Sentin
 
 ## 🚀 3.1 - Attack Simulation & Log Generation
 
-### 1.1 On Windows VM
+### 3.1.1 - On Windows VM
 
 1. From **Attacker VM**, attempt **RDP connections with wrong credentials**.  
 2. Install **SSMS** and try **2 wrong SQL logins** followed by **1 successful login**.  
@@ -24,7 +24,7 @@ This prepares the environment for log ingestion and analysis in Microsoft Sentin
 
 --- 
 
-### 1.2 On Linux VM
+### 3.1.2 - On Linux VM
 
 - From Linux VM, attempt **SSH connections with wrong passwords** to generate logs
 
