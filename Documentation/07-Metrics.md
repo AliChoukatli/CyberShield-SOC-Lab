@@ -2,6 +2,7 @@
 
 The table below presents the security metrics collected over a 24-hour period in our unprotected environment:
 
+## 🚀 7.1 - Metrics before Hardening / Security Controls
 **Monitoring Period:**  
 Start Time: 2025-08-27 14:38  
 Stop Time: 2025-08-28 14:38  
@@ -16,7 +17,7 @@ Stop Time: 2025-08-28 14:38
 | SecurityIncident         | 141
 
 
-## Metrics After Hardening / Security Controls
+## 🚀 7.2 - Metrics After Hardening / Security Controls
 
 The table below shows the security metrics collected over a 24-hour period after implementing hardening measures and security controls:
 
