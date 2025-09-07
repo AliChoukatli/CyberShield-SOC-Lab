@@ -1,4 +1,4 @@
-# 🔴 05 - Log Analytics Workspace & Sentinel Integration:
+# 🔴 04 - Log Analytics Workspace & Sentinel Integration
 
 ## 📝 Introduction
 
