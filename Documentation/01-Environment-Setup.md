@@ -73,9 +73,10 @@ now let's connect to our linux vm using ssh:
 
 ## 🚀 1.5 Attacker VM Setup
 
-- Go to Virtual machines > Create > > Create a new Ressource Group as 'RG-Attacker' and
-- Name the machine as 'attacker-vm'
-- On network tab > create a new vnet for windows > eg : attacker-vm-vnet > Review & Create
+- Create a new resource group: **RG-Attacker**
+- Create a Windows VM named **attacker-vm**
+- On the network tab, create a new VNet for the attacker VM (e.g., `attacker-vm-vnet`)
+- Review & Create.
 
 ![Attacker_Vm_Creation](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/attacker-vm-creation.png)
      
