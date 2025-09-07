@@ -64,31 +64,31 @@ This lab is **for educational purposes only** and should not be used in producti
 ---
 
 * **[Part1: Chapter 1: Environment Setup](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Documentation/01-Environment-Setup.md)**
-1.1: Resource Group, VMs (Windows/Linux), SQL Server
+    * 1.1: Resource Group, VMs (Windows/Linux), SQL Server
 
 * **[Part 2: Vulnerabilities & Configuration](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Documentation/02-Vulnerabilities.md)**
-2.1: RDP/SSH open, Firewall OFF, SQL misconfig
+    * 2.1: RDP/SSH open, Firewall OFF, SQL misconfig
 
 * **[Part 3: Attack Simulation & Logs](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Documentation/03-Attacks-Logs.md)**
-3.1: Attacker VM, brute force attempts, Event Viewer, Syslog
+    * 3.1: Attacker VM, brute force attempts, Event Viewer, Syslog
 
 * **[Part 4: Log Ingestion](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Documentation/04-Log-Ingestion.md)**
-4.1: LAW, AMA, DCR, Syslog, Windows Events
+    * 4.1: LAW, AMA, DCR, Syslog, Windows Events
 
 * **[Part 5: Microsoft Sentinel Setup](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Documentation/05-Sentinel-Setup.md)**
-5.1: Watchlists, Analytics Rules, Workbooks, Incidents
+    * 5.1: Watchlists, Analytics Rules, Workbooks, Incidents
 
 * **[Part 6: Sentinel-Workbooks_&_Analytics](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Documentation/06-Sentinel-Workbooks_%26_Analytics.md)**
-6.1: 
+    * 6.1: 
 
 * **[Part 7: Hardening](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Documentation/07-Hardening.md)**
-7.1: NSG fix, Firewall, Defender for Cloud
+    * 7.1: NSG fix, Firewall, Defender for Cloud
 
 * **[Part 8: Metrics](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Documentation/08-Metrics.md)**
-8.1: Before vs After hardening
+    * 8.1: Before vs After hardening
 
 * **[Part 9: Compliance](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Documentation/09-Compliance.md)**
-9.1 NIST mapping, Defender recommendations
+    * 9.1 NIST mapping, Defender recommendations
 
 ---
 
