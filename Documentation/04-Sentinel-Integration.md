@@ -28,7 +28,7 @@ This setup is the foundation for effective security monitoring, alerting, and in
 3. Create a **Watchlist**:
    - Name: `geoip`  
    - Source Type: *Local File*  
-   - Download & upload the [CSV file](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Sentinel/geoip-summarized.csv) 
+   - Download & upload the [CSV file](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Sentinel_Resources/geoip-summarized.csv)
    - SearchKey: `Network` → **Create**
 
 ![Watchlist_Sentinel](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/watchlist_Sentinel.png)
