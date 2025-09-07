@@ -1,4 +1,4 @@
-# 🔴 06 - Sentinel Workbooks & Analytics
+# 🔴 05 - Sentinel Workbooks & Analytics
 
 ## 📝 Introduction
 This section covers the creation and configuration of Microsoft Sentinel Workbooks, the import of custom JSON queries for monitoring authentication events, and the setup of analytics rules. By following these steps, you can visualize and monitor brute force attempts and other suspicious activities across Windows, Linux, and SQL Server environments. This provides a centralized view of security events, enabling proactive threat detection and response.
