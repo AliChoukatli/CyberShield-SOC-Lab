@@ -39,8 +39,7 @@ To enable SQL Server to send logs to Windows Event Viewer:
 
 1. Open the [Microsoft documentation page](https://learn.microsoft.com/en-us/sql/relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log?view=sql-server-ver16) for guidance.
 
-
-2. Copy the registry key:
+2. Open Registry Editor, copy and paste the key.
 
 ```pgsql
 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services/EventLog/Security
@@ -48,8 +47,7 @@ HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services/EventLog/Security
 
 ![reg_fullcontrol](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/reg_fullcontrol.png)
 
-3. Open Registry Editor, search and paste the key.
-4. Enable auditing using auditpol:
+3. Enable auditing using auditpol:
 
 ```bash
 auditpol /set /subcategory:"application generated" /success:enable /failure:enable
@@ -57,7 +55,7 @@ auditpol /set /subcategory:"application generated" /success:enable /failure:enab
 
 ![audipol](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/audipol_Cmd.png))
 
-5. In SSMS, enable logging for both successful and failed logins:
+4. In SSMS, enable logging for both successful and failed logins:
 
 ![SSMS_Success_Fail](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/SSMS_Success_Fail.png))
 
