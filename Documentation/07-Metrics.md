@@ -7,7 +7,6 @@ The table below presents the security metrics collected over a 24-hour period in
 Start Time: 2025-08-27 14:38  
 Stop Time: 2025-08-28 14:38  
 
-![Metric_Before](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/Metric_before.png)
 
 | Metric                   | Count
 | ------------------------ | -----
@@ -16,6 +15,7 @@ Stop Time: 2025-08-28 14:38
 | SecurityAlert            | 92
 | SecurityIncident         | 141
 
+![Metric_Before](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/Metric_before.png)
 
 ## 🚀 7.2 - Metrics After Hardening / Security Controls
 
