@@ -1,4 +1,4 @@
-# ✅ Compliance
+# 🔴 Part 9 - Compliance
 
 To ensure regulatory compliance in your Azure environment:
 
