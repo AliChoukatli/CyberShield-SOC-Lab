@@ -1,4 +1,4 @@
-# 🔴 Hardening & Incident Management
+# 🔴 Part 7 - Hardening & Incident Management
 
 ## 📝 Introduction
 
