@@ -1,4 +1,4 @@
-# 🔴 03 - Attacker & Logs
+# 🔴 03 - Attacker VM & Log Generation
 
 ## 📝 Introduction
 In this section, we will:  
