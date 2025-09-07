@@ -131,7 +131,7 @@ Microsoft now uses **Azure Monitor Agent (AMA)** with **Data Collection Rules (D
 
 ---
 
-## 🚀 4.8. - Verify Logs in Log Analytics Workspace
+## 🚀 4.8 - Verify Logs in Log Analytics Workspace
 
 ### Windows 
 
