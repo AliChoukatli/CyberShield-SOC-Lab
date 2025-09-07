@@ -59,7 +59,7 @@ HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services/EventLog/Security
 auditpol /set /subcategory:"application generated" /success:enable /failure:enable
 ```
 
-![Auditpol](
+![audipol](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/audipol_Cmd.png))
 
 4. In SSMS, enable logging for both successful and failed logins:
 
