@@ -16,12 +16,12 @@ This setup is the foundation for effective security monitoring, alerting, and in
 
 ---
 
-## 🚀 5.1. Create Log Analytics Workspace
+## 🚀 4.1. Create Log Analytics Workspace
 
 1. Go to **Azure Portal** → *Log Analytics Workspaces* → **Create**.  
 2. Enter a name (e.g., `LAW-CyberShield`) → **Review + Create**.
 
-## 🚀 5.2. Connect Microsoft Sentinel
+## 🚀 4.2. Connect Microsoft Sentinel
 
 1. Go to **Microsoft Sentinel** → **Create**.  
 2. Select your **Log Analytics Workspace**.  
@@ -45,7 +45,7 @@ _GetWatchlist("geoip")
 
 --- 
 
-## 🚀 5.3 Microsoft Defender for cloud
+## 🚀 4.3 Microsoft Defender for cloud
 
 1. Go to **Microsoft Defender for Cloud** → *Environment Settings*.  
 
@@ -70,7 +70,7 @@ _GetWatchlist("geoip")
 
 ---- 
 
-## 🚀 5.4 Storage accounts
+## 🚀 4.4 Storage accounts
 
 1. Go to **Azure** → *Storage Accounts* → **Create**.  
 2. Select your **Resource Group**, enter a unique name → **Review + Create**. 
@@ -79,7 +79,7 @@ _GetWatchlist("geoip")
 
 --- 
 
-## 🚀 5.5 NSG Flow Logs
+## 🚀 4.5 NSG Flow Logs
 
 1. Go to **Azure** → *Network Security Groups (NSG)*.  
 2. Select the **Windows VM** → *NSG Flow Logs* → **Create**.  
@@ -90,7 +90,7 @@ _GetWatchlist("geoip")
 
 ----
 
-## 🚀 5.6 Data Collection Rules (Linux) 
+## 🚀 4.6 Data Collection Rules (Linux) 
 
 1. Go to **Data Collection Rules** → **Create**.  
 2. Enter a name (e.g., `DCR-Linux-Syslog`) → select **Linux** as platform.  
@@ -102,7 +102,7 @@ _GetWatchlist("geoip")
 
 ---
 
-## 🚀 5.7 Collect Windows Security Events via AMA and DCR
+## 🚀 4.7 Collect Windows Security Events via AMA and DCR
 
 
 Microsoft now uses **Azure Monitor Agent (AMA)** with **Data Collection Rules (DCR)** for Windows Security Events.
@@ -131,7 +131,7 @@ Microsoft now uses **Azure Monitor Agent (AMA)** with **Data Collection Rules (D
 
 ---
 
-## 🚀 5.8. Verify Logs in Log Analytics Workspace
+## 🚀 4.8. Verify Logs in Log Analytics Workspace
 
 ### Windows 
 
@@ -161,7 +161,7 @@ Syslog
 
 ---
 
-## 🚀 5.9 Entra ID Logs
+## 🚀 4.9 Entra ID Logs
 
 1. Go to **Microsoft Entra ID** → *Diagnostic Settings* → **+ Add Diagnostic Setting**.  
 2. Name the setting and select the following logs:
@@ -173,7 +173,7 @@ Syslog
 
 ---
 
-## 🚀 5.10 Create a User in Entra ID
+## 🚀 4.10 Create a User in Entra ID
 
 1. Go to **Microsoft Entra ID** → **+ New User** → **Create User**.  
 2. Go to the user (e.g., `test`) → **Assigned Roles** → **Add Assignment** → **Global Administrator**.  
@@ -187,7 +187,7 @@ Syslog
 
 ---
 
-## 🚀 5.11 Export Activity Logs
+## 🚀 4.11 Export Activity Logs
 
 1. Go to **Monitor** → *Activity Log* → **Export Activity Logs**.  
 2. Add a **Diagnostic Setting** → select the following categories:  
@@ -205,7 +205,7 @@ Syslog
 
 ---
 
-## 🚀 5.12 Additional Logs via Storage Accounts & Key Vault
+## 🚀 4.12 Additional Logs via Storage Accounts & Key Vault
 
 ### Storage Accounts
 
