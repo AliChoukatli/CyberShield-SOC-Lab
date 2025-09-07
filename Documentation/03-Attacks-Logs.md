@@ -19,6 +19,8 @@ This prepares the environment for log ingestion and analysis in Microsoft Sentin
 - Create a Windows VM named **attacker-vm**
 - On the network tab, create a new VNet for the attacker VM (e.g., `attacker-vm-vnet`)
 - Review & Create.
+
+![Attacker_Vm_creation](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/attacker-vm-creation.png)
      
 ### RDP Attacker VM using Public IP
 
