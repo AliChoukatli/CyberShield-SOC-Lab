@@ -46,11 +46,18 @@ This prepares the environment for log ingestion and analysis in Microsoft Sentin
 
 ## 🚀 3. SQL Server Audit Configuration (Windows VM)
 
+To enable SQL Server to send logs to Windows Event Viewer:
+
+1. Open the [Microsoft documentation page](https://learn.microsoft.com/en-us/sql/relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log?view=sql-server-ver16) for guidance.
+
+
 Copy the registry key:
 
 ```pgsql
 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services/EventLog/Security
 ```
+
+![reg_fullcontrol](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/reg_fullcontrol.png)
 
 2. Open Registry Editor, search and paste the key.
 3. Enable auditing using auditpol:
@@ -63,7 +70,7 @@ auditpol /set /subcategory:"application generated" /success:enable /failure:enab
 
 4. In SSMS, enable logging for both successful and failed logins:
 
-![SSMS_success_Fail](
+![SSMS_Success_Fail](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/SSMS_Success_Fail.png))
 
 
 ## 🚀 4. Viewing Logs
