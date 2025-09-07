@@ -98,7 +98,7 @@ This lab is **for educational purposes only** and should not be used in producti
 * **[Part 7: Metrics Before & After Hardening](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Documentation/07-Metrics.md)**  
     * 7.1: Security metrics and reporting – Before vs After
 
-* **[Part 8: Compliance](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Documentation/08-Compliance.md)
+* **[Part 8: Compliance](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Documentation/08-Compliance.md)**
     * 8.1: NIST mapping, Defender recommendations
 
   ---
