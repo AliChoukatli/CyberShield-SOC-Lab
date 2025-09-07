@@ -1,11 +1,19 @@
 # 🔴 03 - Attacker & Logs
 
-## 📝 Introduction : 
-This section demonstrates how we simulate attacks from the Attacker VM and generate logs on both Windows and Linux VMs.
+## 📝 Introduction
+In this section, we will:  
+
+1. Create an **Attacker VM**.  
+2. Simulate attacks on Windows and Linux VMs.  
+3. Generate logs (RDP, SSH, SQL).  
+4. Configure SQL Server to send logs to Event Viewer.  
+5. Review logs on the VMs.  
+
+This prepares the environment for log ingestion and analysis in Microsoft Sentinel.
 
 ---
 
-## 🚀 3.1 Attacker Machine Setup
+## 🚀 1. Attacker Machine Setup
 
 - Create a new resource group: **RG-Attacker**
 - Create a Windows VM named **attacker-vm**
@@ -16,51 +24,81 @@ This section demonstrates how we simulate attacks from the Attacker VM and gener
 
 ![attacker_RDP_Win](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/attacker_RDP_Win.png)
 
-## 🚀 3.2 Attacker Logs - Windows
+## 🚀 2. Attack Simulation & Log Generation
 
-- RDP from **Attacker_VM** to **Windows_VM** using wrong credentials to generate logs
-- Install SSMS on the attacker machine and attempt 2 wrong logins followed by 1 correct login
+### 2.1 On Windows VM
+
+1. From **Attacker VM**, attempt **RDP connections with wrong credentials**.  
+2. Install **SSMS** and try **2 wrong SQL logins** followed by **1 successful login**.  
 
 ![attacker-ssms-fail](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/attacker-ssms-fail.png)
 
 --- 
 
-## 🚀 3.3 Attacker Logs - Linux
+### 2.2 On Linux VM
 
-- From Linux VM, attempt SSH connections with wrong passwords to generate logs
+- From Linux VM, attempt **SSH connections with wrong passwords** to generate logs
 
 ![attacker-ssh-connect-fail](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/attacker-ssh-connect-fail.png)
 
 ----
-## 3.4 Viewing Logs on Windows VM
 
-- Open **Event Viewer** to see generated logs from previous exercises. 
 
+## 🚀 3. SQL Server Audit Configuration (Windows VM)
+
+Copy the registry key:
+
+```pgsql
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services/EventLog/Security
+```
+
+2. Open Registry Editor, search and paste the key.
+3. Enable auditing using auditpol:
+
+```bash
+auditpol /set /subcategory:"application generated" /success:enable /failure:enable
+```
+
+![Auditpol](
+
+4. In SSMS, enable logging for both successful and failed logins:
+
+![SSMS_success_Fail](
+
+
+## 🚀 4. Viewing Logs
+
+### 4.1 On Windows VM
+
+- Open Event Viewer to check:
+  - Failed RDP attempts
+  - Successful and failed SQL logins
+    
 ![Event_view_sql_fail](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/Event_view_sql_fail.png)
 
 ![event_attacker-login_fail](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/event_attacker-login_fail.png)
 
----
 
-## 🚀 3.5 Viewing Logs on Linux VM
-
-Now, let's access the Linux VM and inspect the logs that were generated during the previous activities.
+### 4.2 On Linux VM
 
 ```bash
-cd /var/log 
-cat auth.log | grep password to view logs
+cd /var/log
+cat auth.log | grep password
 ```
+- Check failed and successful SSH login attempts
+
 ![cat_auth_log](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/cat_auth_log.png)
 
 ![cat_auth_log_fail_success](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/cat_auth_log_fail_success.png)
 
+
+
 ---
 
-##  ✅ Conclusion
+## ✅ Conclusion
 
-In this section, we successfully set up the Attacker VM and performed simulated attacks on both the Windows and Linux VMs. We generated logs from:
+- The Attacker VM is operational.
+- Simulated attacks generate logs on both Windows and Linux.
+- SQL Server is configured to send logs to Event Viewer.
+- Logs are ready for ingestion and correlation in Microsoft Sentinel for security incident analysis and detection.
 
-- Failed and successful RDP and SQL login attempts on Windows
-- Failed SSH login attempts on Linux
-
-All these logs were collected and verified on the respective systems. This prepares the environment for log ingestion and correlation in Microsoft Sentinel, allowing us to detect, analyze, and respond to potential security incidents in a realistic lab scenario.
