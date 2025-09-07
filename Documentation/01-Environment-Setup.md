@@ -20,15 +20,15 @@ All steps are accompanied by screenshots to ensure clarity and reproducibility.
 - Go to Virtual machines > Create > name it windows-vm
 - on network tab > Create a new vnet > eg : CyberShield-Vnet > Review & Create
      
-![windows-vm-creation](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/windows-vm-Creation.png)
+![windows-vm-creation](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/windows-vm-Creation.png)
 
 ### RDP Windows machine using its Public IP
 
-![Win_IP](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/win_ip.png)
+![Win_IP](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/win_ip.png)
 
 - Go to your host and go to cmd and ping your windows-vm
 
-![ping_windows](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/ping-windows.png)
+![ping_windows](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/ping-windows.png)
 
 ---
 
@@ -37,15 +37,15 @@ All steps are accompanied by screenshots to ensure clarity and reproducibility.
 - Go to Virtual machines > Create > name it linux-vm
 - On network tab > choose the same vnet for windows > eg : CyberShield-Vnet > Review & Create
 
-![linux-vm-creation](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/linux-vm-creation.png)
+![linux-vm-creation](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/linux-vm-creation.png)
 
 ### we will ping our linux machine using the public IP
 
-![ping-linux](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/ping-linux.png)
+![ping-linux](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/ping-linux.png)
 
 now let's connect to our linux vm using ssh:
 
-![ssh_linux_connect](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/ssh_linux_connect.png)
+![ssh_linux_connect](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/ssh_linux_connect.png)
 
 ---
 
@@ -57,7 +57,7 @@ now let's connect to our linux vm using ssh:
 - download media -> ISO -> download
 - Open folder  > right click on SQLServer2022-x64 -> Mount
 
-![SQL_Mount](https://github.com/AliChoukatli/CyberShield-SOC-Honeynet-Sentinel/blob/main/Screenshots/SQL_mount.png)
+![SQL_Mount](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/SQL_Mount.png)
 
 ### SQL Server Configuration
 
@@ -79,7 +79,7 @@ now let's connect to our linux vm using ssh:
      
 ### RDP Attacker Windows machine using its Public IP
 
-![attacker_RDP_Win](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/attacker_RDP_Win.png)
+![attacker_RDP_Win](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Screenshots/attacker_RDP_Win.png)
 
 ---
 
