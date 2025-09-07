@@ -65,16 +65,16 @@ This lab is **for educational purposes only** and should not be used in producti
 
 # CyberShield SOC Lab - Documentation Overview
 
-* **[Part 1: Environment Setup](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Documentation/01-Environment-Setup.md)**  
-    * 1.1: Resource Groups, Windows/Linux VMs, SQL Server
-
+* **[Part 1: Environment Setup](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Documentation/01-Environment-Setup.md)**
+  * 1.1: Resource Groups, Windows/Linux VMs, SQL Server
+  
 * **[Part 2: Vulnerabilities & Configuration](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Documentation/02-Vulnerabilities.md)**  
     * 2.1: RDP/SSH open, Firewall OFF, SQL misconfiguration
 
-* **[Part 3: Attacker VM & Log Generation](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Documentation/03-Attacker_VM-%26-Log_Generation.md)**  
+* **[Part 3: Attacker VM & Log Generation](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Documentation/03-Attacker_VM-%26-Log_Generation.md)**
     * 3.1: Attacker VM, brute force attempts, Event Viewer, Syslog
 
-* **[Part 4: Sentinel Integration](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Documentation/04-Log-Ingestion.md)**  
+* **[Part 4: Sentinel Integration](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Documentation/04-Log-Ingestion.md)**
     * 4.1: Log Analytics Workspace (LAW) creation  
     * 4.2: Microsoft Sentinel setup & Watchlists  
     * 4.3: Microsoft Defender for Cloud configuration  
