@@ -68,22 +68,4 @@ To enable SQL Server to send logs to Windows Event Viewer:
 
 ---
 
-## 🚀 4.4 View Logs on Linux VM
-1. Connect to the Linux VM.
-2. Navigate to the log directory:
-   ```bash
-   cd /var/log
-   ```
-3. Check authentication logs:
-```bash
-cat auth.log | grep password
-```
-![cat_auth_log](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/cat_auth_log.png)
 
-![cat_auth_log_fail_success](https://github.com/AliChoukatli/Azure-Honeynet-SOC-Lab/blob/main/Screenshots/cat_auth_log_fail_success.png)
-
----
-
-✅ Conclusion
-
-At this point, both Windows and Linux VMs are generating logs. Failed and successful login attempts can now be ingested and monitored through Microsoft Sentinel for further analysis.
