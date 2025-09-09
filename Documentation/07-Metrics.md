@@ -3,6 +3,9 @@
 The table below shows the security metrics collected over a 24-hour period before implementing hardening measures and security controls:
 
 ## 🚀 7.1 - Metrics before Hardening / Security Controls
+
+The table below shows the security metrics collected over a 24-hour period before implementing hardening measures and security controls:
+
 **Monitoring Period:**  
 Start Time: 2025-08-27 14:38  
 Stop Time: 2025-08-28 14:38  
