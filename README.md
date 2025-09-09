@@ -31,7 +31,6 @@ This lab is **for educational purposes only** and should not be used in producti
 - **Microsoft Sentinel**: SIEM + SOAR for monitoring and incident response
 - **Log Analytics Workspace**: Centralized log collection
 - **Key Vault**: Secure storage for secrets, keys, and certificates
-- 
 
 **Data sources ingested:**
 - Security logs from Windows and Linux VMs (including SQL Server logs)
