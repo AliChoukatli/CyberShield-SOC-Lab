@@ -130,7 +130,7 @@ This lab is **for educational purposes only** and should not be used in producti
 
 ## 🚀 Metrics before Hardening / Security Controls
 
-The table below shows the security metrics collected over a 24-hour period after implementing hardening measures and security controls:
+The table below shows the security metrics collected over a 24-hour period before implementing hardening measures and security controls:
 
 **Monitoring Period:**  
 Start Time: 2025-08-27 14:38  
