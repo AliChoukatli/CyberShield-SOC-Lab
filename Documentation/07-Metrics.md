@@ -1,7 +1,5 @@
 # 🔴 Part 7 - Metrics Before Hardening / Security Controls
 
-The table below shows the security metrics collected over a 24-hour period before implementing hardening measures and security controls:
-
 ## 🚀 7.1 - Metrics before Hardening / Security Controls
 
 The table below shows the security metrics collected over a 24-hour period before implementing hardening measures and security controls:
