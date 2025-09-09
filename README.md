@@ -6,7 +6,7 @@
 
 
 
-## Overview
+## 🎯 Project Overview
 This project demonstrates the deployment and monitoring of a **honeynet environment** in Microsoft Azure, integrated with **Microsoft Sentinel** and **Microsoft Defender** for threat detection, incident response, and security visibility.
 
 The goal is to simulate a real-world enterprise SOC (Security Operations Center) scenario by:
