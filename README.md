@@ -62,7 +62,7 @@ This lab is **for educational purposes only** and should not be used in producti
 
 ---
 
-# 📘 Table of Contents
+## 📘 Table of Contents
 
 * **[Part 1: Environment Setup](https://github.com/AliChoukatli/CyberShield-SOC-Lab/blob/main/Documentation/01-Environment-Setup.md)**
     * 1.1: Resource Groups, Windows/Linux VMs, SQL Server
